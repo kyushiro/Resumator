@@ -60,10 +60,21 @@ typings/
 # next.js build output
 .next
 
+#pdf generated
 pdf/
+pdf/*
+pdf/**
+*.pdf
 
 # Sass things
 *.sass-cache
-*style.css.map
+.sass-cache/
+.sass-cache/*
+.sass-cache/**
+*.scssc
+style.css.map
 
 .idea
+.idea/
+.idea/*
+.idea/**
