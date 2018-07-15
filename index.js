@@ -3,7 +3,9 @@ const http = require('http')
 const pdf = require('html-pdf')
 const tmpl = fs.readFileSync('assets/businesscard.html', 'utf8')
 
-var model = {name: "Christophe Ramsamy", position: "Major Alpha Geek"};
+var model = {name: "Christophe Ramsamy", 
+position: "Major Alpha Geek",
+image: `./assets/image.png`};
 
 const server = http.createServer(function (req, res) {
   if (req.url === '/favicon.ico') return res.end('404')

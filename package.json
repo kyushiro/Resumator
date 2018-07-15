@@ -9,6 +9,7 @@
   "author": "Geeksphere Labs",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "html-pdf": "*",
     "mongoose": "^5.2.3"
