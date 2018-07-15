@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
+const Config = require('../config');
+
 
 const fs = require('fs')
 const http = require('http')
@@ -9,7 +11,7 @@ const tmpl = fs.readFileSync('assets/businesscard.html', 'utf8')
 
 var model = {name: "Christophe Ramsamy", 
 position: "Major Alpha Geek",
-image: "http://localhost:4000/image.png"};
+image: Config.app_base_url+"/image.png"};
 
 router.route('/preview').get(function(req, res){
     var html = tmpl;
