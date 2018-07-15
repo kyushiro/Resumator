@@ -1,4 +1,5 @@
 const express = require('express');
+const pug = require('pug');
 const app = express();
 const router = express.Router();
 const Config = require('../config');
@@ -7,18 +8,20 @@ const Config = require('../config');
 const fs = require('fs')
 const http = require('http')
 const pdf = require('html-pdf')
-const tmpl = fs.readFileSync('assets/businesscard.html', 'utf8')
+
+const compiledtpl = pug.compileFile('assets/bcard.pug')
 
 var model = {name: "Christophe Ramsamy", 
 position: "Major Alpha Geek",
-image: Config.app_base_url+"/image.png"};
+image: Config.app_base_url+"/image.png",
+phone: "+230 57 12 74 42"};
+
+const tmpl = compiledtpl(model);
+// const tmpl = fs.readFileSync('assets/businesscard.html', 'utf8')
+
 
 router.route('/preview').get(function(req, res){
     var html = tmpl;
-    for (key in model){
-        html = html.replace("{{"+key+"}}",model[key]);  
-    }
-
     res.end(html);
 });
 
