@@ -62,7 +62,7 @@ typings/
 
 #pdf generated
 pdf/
-pdf/*
+pdf/*.pdf
 pdf/**
 *.pdf
 
