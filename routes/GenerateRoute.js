@@ -16,6 +16,8 @@ position: "Major Alpha Geek",
 image: Config.app_base_url+"/image.png",
 phone: "+230 57 12 74 42"};
 
+model['app_base_url'] = Config.app_base_url;
+
 const tmpl = compiledtpl(model);
 // const tmpl = fs.readFileSync('assets/businesscard.html', 'utf8')
 
