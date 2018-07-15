@@ -9,7 +9,7 @@ const tmpl = fs.readFileSync('assets/businesscard.html', 'utf8')
 
 var model = {name: "Christophe Ramsamy", 
 position: "Major Alpha Geek",
-image: "../../image.png"};
+image: "http://localhost:4000/image.png"};
 
 router.route('/preview').get(function(req, res){
     var html = tmpl;

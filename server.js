@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 //    () => { console.log("db connection successful") },
 //    err => { console.log("db connection failed, "+err) }
 // );
+
 app.use(express.static('assets'));
 
 app.use('/generate', GenerateRoute);
