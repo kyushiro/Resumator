@@ -1,0 +1,26 @@
+html
+  head
+    meta(charset="utf8")
+    title SuitArt Business Card
+    - var stylesheetLink = app_base_url + '/theme/simple/style.css'
+    - var stylesheetCommonLink = app_base_url + '/theme/common/style.css'
+    link(rel='stylesheet', href=stylesheetCommonLink)
+    link(rel='stylesheet', href=stylesheetLink)
+  body
+    .row
+      .col-12
+        .page
+          .bottom
+            .line #{name}
+            .line #{position}
+            .group
+              .line p: #{phone}
+              .line github: marcbachmann
+            .group
+              .line suitart ag
+              .line räffelstrasse 25
+              .line 8045 zürich
+    .page
+      img.logo(src=image)
+      .bottom
+        .line.center 8045 zürich

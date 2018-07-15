@@ -9,7 +9,8 @@ const fs = require('fs')
 const http = require('http')
 const pdf = require('html-pdf')
 
-const compiledtpl = pug.compileFile('assets/bcard.pug')
+const compiledtpl = pug.compileFile('assets/theme/simple/index.pug')
+// const compiledtpl = pug.compileFile('assets/bcard.pug')
 
 var model = {name: "Christophe Ramsamy", 
 position: "Major Alpha Geek",
