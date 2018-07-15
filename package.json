@@ -1,0 +1,14 @@
+{
+  "name": "Resumator",
+  "version": "0.0.1",
+  "description": "Job applicant Resume Management System",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "main": "lib/index.js",
+  "author": "Geeksphere Labs",
+  "license": "MIT",
+  "dependencies": {
+    "html-pdf": "*"
+  }
+}
