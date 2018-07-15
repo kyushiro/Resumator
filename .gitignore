@@ -61,3 +61,7 @@ typings/
 .next
 
 pdf/
+
+# Sass things
+*.sass-cache
+*style.css.map
