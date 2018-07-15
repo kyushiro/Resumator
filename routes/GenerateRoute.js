@@ -36,7 +36,7 @@ router.route('/pdf').get(function(req, res){
 
     // res.end(html);
 
-    pdf.create(html, {width: '50mm', height: '90mm'}).toFile('pdf/cardxxx.pdf', (err, obj) => {
+    pdf.create(html).toFile('pdf/cardxxx.pdf', (err, obj) => {
         var stream = fs.readFileSync(obj.filename);
         console.log("wrote to file and sending");
         console.log(obj);
