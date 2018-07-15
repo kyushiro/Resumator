@@ -65,3 +65,5 @@ pdf/
 # Sass things
 *.sass-cache
 *style.css.map
+
+.idea
