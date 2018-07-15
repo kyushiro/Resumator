@@ -68,6 +68,7 @@ pdf/**
 
 # Sass things
 *.sass-cache
+*/.sass-cache
 .sass-cache/
 .sass-cache/*
 .sass-cache/**
