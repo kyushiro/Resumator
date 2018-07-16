@@ -11,7 +11,12 @@ var UserSchema = new Schema({
   password: {
         type: String,
         required: true
-    }
+    },
+  role : {
+      type: String,
+      default: 'user',
+      enum: ['user','recruiter']
+  }
 });
 
 UserSchema.pre('save', function (next) {
