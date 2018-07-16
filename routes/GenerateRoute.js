@@ -30,16 +30,9 @@ router.route('/preview').get(function(req, res){
 
 router.route('/pdf').get(function(req, res){
     var html = tmpl;
-    for (key in model){
-        html = html.replace("{{"+key+"}}",model[key]);  
-    }
-
-    // res.end(html);
 
     pdf.create(html).toFile('pdf/cardxxx.pdf', (err, obj) => {
         var stream = fs.readFileSync(obj.filename);
-        console.log("wrote to file and sending");
-        console.log(obj);
         res.setHeader('Content-type', 'application/pdf');
         res.end(stream);
     });
