@@ -23,6 +23,33 @@ var LanguageSchema = new Schema({
     }
 });
 
+var EducationSchema = new Schema({
+  organization_name: {
+    type: String,
+    required: false
+  },
+  course_name: {
+    type: String,
+    required: true
+  },
+  course_description: {
+    type: String,
+    required: true
+  },
+  location: {
+    type: String,
+    required: true
+  },
+  date_started: {
+    type: Date,
+    required: true
+  },
+  date_ended: {
+    type: Date,
+    required: false
+  }
+});
+
 var WorkExpSchema = new Schema({
     position : {
         type: String,
@@ -89,19 +116,31 @@ var ResumeSchema = new Schema({
   },
   profile_pic: {
     type: String,
-    required: true
+    required: false
   },
   linkedin: {
     type: String,
-    required: true
+    required: false
   },
   twitter: {
     type: String,
-    required: true
+    required: false
   },
   facebook: {
     type: String,
-    required: true
+    required: false
+  },
+  instagram: {
+    type: String,
+    required: false
+  },
+  github: {
+    type: String,
+    required: false
+  },
+  website: {
+    type: String,
+    required: false
   },
   bio: {
     type: String,
@@ -113,6 +152,7 @@ var ResumeSchema = new Schema({
   },
   skills: [SkillSchema],
   work_experience: [WorkExpSchema],
+  education: [EducationSchema],
   languages: [LanguageSchema]
 });
 
