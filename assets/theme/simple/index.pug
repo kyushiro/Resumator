@@ -16,24 +16,50 @@ html
               span.text-block.text-last #{last_name} last name
             .row.border-bottom
               .col-8
-                h2.sub-title #{job_title} Job title
+                h2.sub-title #{current_job_title} Job title
               .col-4.text-right
-                p Link to LinkedIn, FB
-    .row
-      .col-4
-        .page
-          .bottom
-            .line #{name}
-            .line #{position}
-            .group
-              .line p: #{phone}
-              .line github: marcbachmann
-            .group
-              .line suitart ag
-              .line räffelstrasse 25
-              .line 8045 zürich
-      .col-8
-        .page
-          img.logo(src=image)
-          .bottom
-            .line.center 8045 zürich
+                - var linkedIn = linkedin
+                - var twitterLink = twitter
+                - var facebookLink = facebook
+                - var githubLink = github
+                - var instagramLink = instagram
+                ul.list-inline
+                  li.list-inline-item--social
+                    a(href=linkedIn, target='_blank')
+                      p.h4
+                        i.fa.fa-linkedin-square
+                  li.list-inline-item--social
+                    a(href=twitterLink, target='_blank')
+                      p.h4
+                        i.fa.fa-twitter-square
+                  li.list-inline-item--social
+                    a(href=facebookLink, target='_blank')
+                      p.h4
+                        i.fa.fa-facebook-square
+                  li.list-inline-item--social
+                    a(href=githubLink, target='_blank')
+                      p.h4
+                        i.fa.fa-github-square
+                  li.list-inline-item--social
+                    a(href=instagramLink, target='_blank')
+                      p.h4
+                        i.fa.fa-instagram
+    .section
+      .row
+        .col-4
+          .page
+            .bottom
+              .line #{name}
+              .line #{position}
+              .group
+                .line p: #{phone}
+                .line github: marcbachmann
+              .group
+                .line suitart ag
+                .line räffelstrasse 25
+                .line 8045 zürich
+        .col-8
+          .page
+            img.logo(src=image)
+            .bottom
+              .line.center 8045 zürich

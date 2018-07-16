@@ -18,6 +18,11 @@ image: Config.app_base_url+"/image.png",
 phone: "+230 57 12 74 42"};
 
 model['app_base_url'] = Config.app_base_url;
+model['linkedin'] = "http://google.com";
+model['twitter'] = "http://google.com";
+model['facebook'] = "http://google.com";
+model['github'] = "http://google.com";
+model['instagram'] = "http://google.com";
 
 const tmpl = compiledtpl(model);
 // const tmpl = fs.readFileSync('assets/businesscard.html', 'utf8')
