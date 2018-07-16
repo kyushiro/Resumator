@@ -7,6 +7,18 @@ html
     link(rel='stylesheet', href=stylesheetCommonLink)
     link(rel='stylesheet', href=stylesheetLink)
   body
+    .container.mt-20.mb-20
+      .row
+        .col-12
+          .header
+            h1.header-title
+              span.text-block.text-first #{first_name} first name
+              span.text-block.text-last #{last_name} last name
+            .row.border-bottom
+              .col-8
+                h2.sub-title #{job_title} Job title
+              .col-4.text-right
+                p Link to LinkedIn, FB
     .row
       .col-4
         .page

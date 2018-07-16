@@ -1,0 +1,17 @@
+.text{
+  &-block{
+    display: block;
+  }
+  &-capitalize{
+    text-transform: capitalize;
+  }
+  &-uppercase{
+    text-transform: uppercase;
+  }
+  &-right{
+    text-align: right;
+  }
+  &-center{
+    text-align: center;
+  }
+}
