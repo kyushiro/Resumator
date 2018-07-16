@@ -114,6 +114,10 @@ var ResumeSchema = new Schema({
     type: String,
     required: true
   },
+  current_job_title: {
+    type: String,
+    required: false
+  },
   profile_pic: {
     type: String,
     required: false
