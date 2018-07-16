@@ -12,8 +12,6 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1",
     "html-pdf": "*",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.3",
@@ -23,6 +21,9 @@
     "pug": "^2.0.3"
   },
   "devDependencies": {
-    "node-sass": "^4.9.2"
+    "gulp": "^3.9.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-filenames": "^4.0.1",
+    "gulp-sass": "^4.0.1"
   }
 }
