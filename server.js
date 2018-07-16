@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 //    err => { console.log("db connection failed, "+err) }
 // );
 
-mongoose.connect(dbconfig.database);
+mongoose.connect(dbconfig.database, { useNewUrlParser: true });
 
 var api = require('./routes/api');
 
