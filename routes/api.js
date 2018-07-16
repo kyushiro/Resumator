@@ -39,7 +39,7 @@ router.post('/signup', function(req, res) {
         user.comparePassword(req.body.password, function (err, isMatch) {
           if (isMatch && !err) {
             // if user is found and password is right create a token
-            var token = jwt.sign(user, config.secret);
+            var token = jwt.sign(user.toJSON(), config.secret);
             // return the information including token as JSON
             res.json({success: true, token: 'JWT ' + token});
           } else {
@@ -64,5 +64,15 @@ router.post('/signup', function(req, res) {
     }
   };
 
+
+
+  router.get('/test', passport.authenticate('jwt', { session: false}), function(req, res) {
+    var token = getToken(req.headers);
+    if (token) {
+      res.json({success: true, msg: 'Successfully accessed protected resource'});
+    } else {
+      return res.status(403).send({success: false, msg: 'Unauthorized.'});
+    }
+  });
 
   module.exports = router;
