@@ -7,7 +7,11 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const app = express();
-const Config = require('./config');
+
+const morgan = require('morgan');
+const passport = require('passport');
+const dbconfig = require('./config/database');
+
 const port = process.env.port || 4000;
 
 const GenerateRoute = require('./routes/GenerateRoute');
@@ -19,7 +23,28 @@ app.use(bodyParser.json());
 //    err => { console.log("db connection failed, "+err) }
 // );
 
+mongoose.connect(dbconfig.database);
+
+var api = require('./routes/api');
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
+app.use(passport.initialize());
 app.use(express.static('assets'));
+
+
+app.get('/', function(req, res) {
+    res.send('Page under construction.');
+});
+  
+app.use('/api', api);
+
+
+
 
 app.use('/generate', GenerateRoute);
 app.listen(process.env.PORT || 4000, function(){
