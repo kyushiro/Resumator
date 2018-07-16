@@ -6,6 +6,7 @@
   font-weight: 400;
   src: local("Asap Regular"), local("Asap-Regular"), url(https://fonts.gstatic.com/s/asap/v7/KFOoCniXp96ayzQe4GZNCzcFKw.woff2) format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB; }
+
 /* latin-ext */
 @font-face {
   font-family: 'Asap';
@@ -13,6 +14,7 @@
   font-weight: 400;
   src: local("Asap Regular"), local("Asap-Regular"), url(https://fonts.gstatic.com/s/asap/v7/KFOoCniXp96ayzUe4GZNCzcFKw.woff2) format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
 /* latin */
 @font-face {
   font-family: 'Asap';
@@ -20,6 +22,7 @@
   font-weight: 400;
   src: local("Asap Regular"), local("Asap-Regular"), url(https://fonts.gstatic.com/s/asap/v7/KFOoCniXp96ayzse4GZNCzc.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 /* latin-ext */
 @font-face {
   font-family: 'Gudea';
@@ -27,6 +30,7 @@
   font-weight: 400;
   src: local("Gudea Italic"), local("Gudea-Italic"), url(https://fonts.gstatic.com/s/gudea/v6/neILzCqgsI0mp9CNzoymM4MwWJXNqA.woff2) format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
 /* latin */
 @font-face {
   font-family: 'Gudea';
@@ -34,6 +38,7 @@
   font-weight: 400;
   src: local("Gudea Italic"), local("Gudea-Italic"), url(https://fonts.gstatic.com/s/gudea/v6/neILzCqgsI0mp9CNzoKmM4MwWJU.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 /* latin-ext */
 @font-face {
   font-family: 'Gudea';
@@ -41,6 +46,7 @@
   font-weight: 400;
   src: local("Gudea"), url(https://fonts.gstatic.com/s/gudea/v6/neIFzCqgsI0mp9CG_oCsNKEyaJQ.woff2) format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
 /* latin */
 @font-face {
   font-family: 'Gudea';
@@ -48,6 +54,7 @@
   font-weight: 400;
   src: local("Gudea"), url(https://fonts.gstatic.com/s/gudea/v6/neIFzCqgsI0mp9CI_oCsNKEy.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 /* latin-ext */
 @font-face {
   font-family: 'Gudea';
@@ -55,6 +62,7 @@
   font-weight: 700;
   src: local("Gudea Bold"), local("Gudea-Bold"), url(https://fonts.gstatic.com/s/gudea/v6/neIIzCqgsI0mp9gz25WPFqwYUp31kXI.woff2) format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
 /* latin */
 @font-face {
   font-family: 'Gudea';
@@ -62,6 +70,7 @@
   font-weight: 700;
   src: local("Gudea Bold"), local("Gudea-Bold"), url(https://fonts.gstatic.com/s/gudea/v6/neIIzCqgsI0mp9gz25WBFqwYUp31.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 /* Framework variables */
 /* 
   Colors used by this Theme
@@ -950,15 +959,15 @@
   -webkit-border-radius: 8px;
   border-radius: 8px; }
 
-                                                                                                                                                                                              /*
-* jQuery UI Resizable 1.8.7
-*
-* Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
-* Dual licensed under the MIT or GPL Version 2 licenses.
-* http://jquery.org/license
-*
-* http://docs.jquery.com/UI/Resizable#theming
-*/
+/*
+ * jQuery UI Resizable 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
 .ui-resizable {
   position: relative; }
 
@@ -1027,15 +1036,15 @@
   right: -5px;
   top: -5px; }
 
-                                                                                      /*
-* jQuery UI Selectable 1.8.7
-*
-* Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
-* Dual licensed under the MIT or GPL Version 2 licenses.
-* http://jquery.org/license
-*
-* http://docs.jquery.com/UI/Selectable#theming
-*/
+/*
+ * jQuery UI Selectable 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Selectable#theming
+ */
 .ui-selectable-helper {
   position: absolute;
   z-index: 100;
@@ -1100,15 +1109,15 @@
 .ui-accordion .ui-accordion-content-active {
   display: block; }
 
-                                                             /*
-* jQuery UI Autocomplete 1.8.7
-*
-* Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
-* Dual licensed under the MIT or GPL Version 2 licenses.
-* http://jquery.org/license
-*
-* http://docs.jquery.com/UI/Autocomplete#theming
-*/
+/*
+ * jQuery UI Autocomplete 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Autocomplete#theming
+ */
 .ui-autocomplete {
   position: absolute;
   cursor: default;
@@ -1287,6 +1296,7 @@ input.ui-button::-moz-focus-inner {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input.ui-button {
     height: 31px !important; } }
+
 /*button icon element(s) */
 .ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon {
   position: absolute;
@@ -1516,15 +1526,15 @@ button.ui-button::-moz-focus-inner {
 .ui-slider-vertical .ui-slider-range-max {
   top: 0; }
 
-                                                   /*
-* jQuery UI Tabs 1.8.7
-*
-* Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
-* Dual licensed under the MIT or GPL Version 2 licenses.
-* http://jquery.org/license
-*
-* http://docs.jquery.com/UI/Tabs#theming
-*/
+/*
+ * jQuery UI Tabs 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
 .ui-tabs {
   position: relative;
   zoom: 1;
@@ -1833,14 +1843,14 @@ button.ui-button::-moz-focus-inner {
   /*must have*/ }
 
 /*
-* jQuery UI Progressbar 1.8.7
-*
-* Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
-* Dual licensed under the MIT or GPL Version 2 licenses.
-* http://jquery.org/license
-*
-* http://docs.jquery.com/UI/Progressbar#theming
-*/
+ * jQuery UI Progressbar 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
 .ui-progressbar {
   height: 12px;
   text-align: left;
@@ -2459,9 +2469,9 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
     background-image: url("../images/select2x2.png") !important;
     background-repeat: no-repeat !important;
     background-size: 60px 40px !important; }
-
   .select2-search input {
     background-position: 100% -21px !important; } }
+
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2474,7 +2484,8 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.fa, #context-menu li a.submenu:before, .jstElements button[type="button"]:before, #top-menu a:before, #top-menu .icon-add.checklist-new-only:before, #top-menu #account .login:before, #top-menu #account .register:before, #admin-menu a:before, #admin-menu .icon-add.checklist-new-only:before, tr.project [id^="favorite_project"], tr span.expander:before, tr.open span.expander:before, table.boards a.board:before, table.boards .board.icon-add.checklist-new-only:before, h3.comments:before, h3.version:before, div.issues h3:before, div.members h3:before, div.news h3:before, div.projects h3:before, #watchers a.delete:before, #watchers .delete.icon-add.checklist-new-only:before, span.search_for_watchers a:before, span.search_for_watchers .icon-add.checklist-new-only:before, span.add_attachment a:before, span.add_attachment .icon-add.checklist-new-only:before, fieldset.collapsible > legend:before, .my-project:before, span.icon-search:before, table.cal .starting a:before, table.cal .starting .icon-add.checklist-new-only:before, p.cal.legend .starting:before, table.cal .ending a:before, table.cal .ending .icon-add.checklist-new-only:before, p.cal.legend .ending:before, table.cal .starting.ending a:before, p.cal.legend .starting.ending:before, button.tab-left:before, button.tab-right:before, a.close-icon:before, .close-icon.icon-add.checklist-new-only:before, .icon:before, #impersonate:before, .tweaks:before, .login-audit:before, [class*="icon-"]:before, .sort-handle:before, #context-menu li a:before, #context-menu li .icon-add.checklist-new-only:before, tr.project.idnt td.name span:before, tr.issue.idnt td.subject a:before, tr.issue.idnt td.subject .icon-add.checklist-new-only:before, dt.time-entry:before, dt.attachment:before, dt.issue-closed:before, .icon-contact:before, .icon-invoice:before, .jstEditor:not(.zen) button.jstb_zenedit:before, #invoice_contact_id_add_link:before {
+
+.fa, #context-menu li a.submenu:before, .jstElements button[type="button"]:before, #top-menu a:before, #top-menu .icon-add.checklist-new-only:before, #top-menu #account .login:before, #top-menu #account .register:before, #admin-menu a:before, #admin-menu .icon-add.checklist-new-only:before, tr.project [id^="favorite_project"], tr span.expander:before, tr.open span.expander:before, table.boards a.board:before, table.boards .board.icon-add.checklist-new-only:before, h3.comments:before, h3.version:before, div.issues h3:before, div.members h3:before, div.news h3:before, div.projects h3:before, #watchers a.delete:before, #watchers .delete.icon-add.checklist-new-only:before, span.search_for_watchers a:before, span.search_for_watchers .icon-add.checklist-new-only:before, span.add_attachment a:before, span.add_attachment .icon-add.checklist-new-only:before, fieldset.collapsible > legend:before, .my-project:before, span.icon-search:before, table.cal .starting a:before, table.cal .starting .icon-add.checklist-new-only:before, p.cal.legend .starting:before, table.cal .ending a:before, table.cal .ending .icon-add.checklist-new-only:before, p.cal.legend .ending:before, table.cal .starting.ending a:before, table.cal .starting.ending .icon-add.checklist-new-only:before, p.cal.legend .starting.ending:before, button.tab-left:before, button.tab-right:before, a.close-icon:before, .close-icon.icon-add.checklist-new-only:before, .icon:before, #impersonate:before, .tweaks:before, .login-audit:before, [class*="icon-"]:before, .sort-handle:before, #context-menu li a:before, #context-menu li .icon-add.checklist-new-only:before, tr.project.idnt td.name span:before, tr.issue.idnt td.subject a:before, tr.issue.idnt td.subject .icon-add.checklist-new-only:before, dt.time-entry:before, dt.attachment:before, dt.issue-closed:before, .icon-contact:before, .icon-invoice:before, .jstEditor:not(.zen) button.jstb_zenedit:before, #invoice_contact_id_add_link:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -2533,10 +2544,10 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .jstElements button.fa-pull-left[type="button"]:before, #top-menu a.fa-pull-left:before, #top-menu .fa-pull-left.icon-add.checklist-new-only:before, #top-menu #account .fa-pull-left.login:before, #top-menu #account .fa-pull-left.register:before, #admin-menu a.fa-pull-left:before, #admin-menu .fa-pull-left.icon-add.checklist-new-only:before, tr.project .fa-pull-left[id^="favorite_project"], tr span.fa-pull-left.expander:before, table.boards a.fa-pull-left.board:before, table.boards .fa-pull-left.board.icon-add.checklist-new-only:before, h3.fa-pull-left.comments:before, h3.fa-pull-left.version:before, div.issues h3.fa-pull-left:before, div.members h3.fa-pull-left:before, div.news h3.fa-pull-left:before, div.projects h3.fa-pull-left:before, #watchers a.fa-pull-left.delete:before, #watchers .fa-pull-left.delete.icon-add.checklist-new-only:before, span.search_for_watchers a.fa-pull-left:before, span.search_for_watchers .fa-pull-left.icon-add.checklist-new-only:before, span.add_attachment a.fa-pull-left:before, span.add_attachment .fa-pull-left.icon-add.checklist-new-only:before, fieldset.collapsible > legend.fa-pull-left:before, .fa-pull-left.my-project:before, span.fa-pull-left.icon-search:before, table.cal .starting a.fa-pull-left:before, table.cal .starting .fa-pull-left.icon-add.checklist-new-only:before, p.cal.legend .fa-pull-left.starting:before, table.cal .ending a.fa-pull-left:before, table.cal .ending .fa-pull-left.icon-add.checklist-new-only:before, p.cal.legend .fa-pull-left.ending:before, button.fa-pull-left.tab-left:before, button.fa-pull-left.tab-right:before, a.fa-pull-left.close-icon:before, .fa-pull-left.close-icon.icon-add.checklist-new-only:before, .fa-pull-left.icon:before, .fa-pull-left#impersonate:before, .fa-pull-left.tweaks:before, .fa-pull-left.login-audit:before, .fa-pull-left[class*="icon-"]:before, .fa-pull-left.sort-handle:before, #context-menu li a.fa-pull-left:before, #context-menu li .fa-pull-left.icon-add.checklist-new-only:before, tr.project.idnt td.name span.fa-pull-left:before, tr.issue.idnt td.subject a.fa-pull-left:before, tr.issue.idnt td.subject .fa-pull-left.icon-add.checklist-new-only:before, dt.fa-pull-left.time-entry:before, dt.fa-pull-left.attachment:before, dt.fa-pull-left.issue-closed:before, .fa-pull-left.icon-contact:before, .fa-pull-left.icon-invoice:before, .jstEditor:not(.zen) button.fa-pull-left.jstb_zenedit:before, .fa-pull-left#invoice_contact_id_add_link:before {
+.fa.fa-pull-left, .jstElements button.fa-pull-left[type="button"]:before, #top-menu a.fa-pull-left:before, #top-menu .fa-pull-left.icon-add.checklist-new-only:before, #top-menu #account .fa-pull-left.login:before, #top-menu #account .fa-pull-left.register:before, #admin-menu a.fa-pull-left:before, #admin-menu .fa-pull-left.icon-add.checklist-new-only:before, tr.project .fa-pull-left[id^="favorite_project"], tr span.fa-pull-left.expander:before, table.boards a.fa-pull-left.board:before, table.boards .fa-pull-left.board.icon-add.checklist-new-only:before, h3.fa-pull-left.comments:before, h3.fa-pull-left.version:before, div.issues h3.fa-pull-left:before, div.members h3.fa-pull-left:before, div.news h3.fa-pull-left:before, div.projects h3.fa-pull-left:before, #watchers a.fa-pull-left.delete:before, #watchers .fa-pull-left.delete.icon-add.checklist-new-only:before, span.search_for_watchers a.fa-pull-left:before, span.search_for_watchers .fa-pull-left.icon-add.checklist-new-only:before, span.add_attachment a.fa-pull-left:before, span.add_attachment .fa-pull-left.icon-add.checklist-new-only:before, fieldset.collapsible > legend.fa-pull-left:before, .fa-pull-left.my-project:before, span.fa-pull-left.icon-search:before, table.cal .starting a.fa-pull-left:before, table.cal .starting .fa-pull-left.icon-add.checklist-new-only:before, p.cal.legend .fa-pull-left.starting:before, table.cal .ending a.fa-pull-left:before, table.cal .ending .fa-pull-left.icon-add.checklist-new-only:before, p.cal.legend .fa-pull-left.ending:before, table.cal .starting.ending .fa-pull-left.icon-add.checklist-new-only:before, button.fa-pull-left.tab-left:before, button.fa-pull-left.tab-right:before, a.fa-pull-left.close-icon:before, .fa-pull-left.close-icon.icon-add.checklist-new-only:before, .fa-pull-left.icon:before, .fa-pull-left#impersonate:before, .fa-pull-left.tweaks:before, .fa-pull-left.login-audit:before, .fa-pull-left[class*="icon-"]:before, .fa-pull-left.sort-handle:before, #context-menu li a.fa-pull-left:before, #context-menu li .fa-pull-left.icon-add.checklist-new-only:before, tr.project.idnt td.name span.fa-pull-left:before, tr.issue.idnt td.subject a.fa-pull-left:before, tr.issue.idnt td.subject .fa-pull-left.icon-add.checklist-new-only:before, dt.fa-pull-left.time-entry:before, dt.fa-pull-left.attachment:before, dt.fa-pull-left.issue-closed:before, .fa-pull-left.icon-contact:before, .fa-pull-left.icon-invoice:before, .jstEditor:not(.zen) button.fa-pull-left.jstb_zenedit:before, .fa-pull-left#invoice_contact_id_add_link:before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .jstElements button.fa-pull-right[type="button"]:before, #top-menu a.fa-pull-right:before, #top-menu .fa-pull-right.icon-add.checklist-new-only:before, #top-menu #account .fa-pull-right.login:before, #top-menu #account .fa-pull-right.register:before, #admin-menu a.fa-pull-right:before, #admin-menu .fa-pull-right.icon-add.checklist-new-only:before, tr.project .fa-pull-right[id^="favorite_project"], tr span.fa-pull-right.expander:before, table.boards a.fa-pull-right.board:before, table.boards .fa-pull-right.board.icon-add.checklist-new-only:before, h3.fa-pull-right.comments:before, h3.fa-pull-right.version:before, div.issues h3.fa-pull-right:before, div.members h3.fa-pull-right:before, div.news h3.fa-pull-right:before, div.projects h3.fa-pull-right:before, #watchers a.fa-pull-right.delete:before, #watchers .fa-pull-right.delete.icon-add.checklist-new-only:before, span.search_for_watchers a.fa-pull-right:before, span.search_for_watchers .fa-pull-right.icon-add.checklist-new-only:before, span.add_attachment a.fa-pull-right:before, span.add_attachment .fa-pull-right.icon-add.checklist-new-only:before, fieldset.collapsible > legend.fa-pull-right:before, .fa-pull-right.my-project:before, span.fa-pull-right.icon-search:before, table.cal .starting a.fa-pull-right:before, table.cal .starting .fa-pull-right.icon-add.checklist-new-only:before, p.cal.legend .fa-pull-right.starting:before, table.cal .ending a.fa-pull-right:before, table.cal .ending .fa-pull-right.icon-add.checklist-new-only:before, p.cal.legend .fa-pull-right.ending:before, button.fa-pull-right.tab-left:before, button.fa-pull-right.tab-right:before, a.fa-pull-right.close-icon:before, .fa-pull-right.close-icon.icon-add.checklist-new-only:before, .fa-pull-right.icon:before, .fa-pull-right#impersonate:before, .fa-pull-right.tweaks:before, .fa-pull-right.login-audit:before, .fa-pull-right[class*="icon-"]:before, .fa-pull-right.sort-handle:before, #context-menu li a.fa-pull-right:before, #context-menu li .fa-pull-right.icon-add.checklist-new-only:before, tr.project.idnt td.name span.fa-pull-right:before, tr.issue.idnt td.subject a.fa-pull-right:before, tr.issue.idnt td.subject .fa-pull-right.icon-add.checklist-new-only:before, dt.fa-pull-right.time-entry:before, dt.fa-pull-right.attachment:before, dt.fa-pull-right.issue-closed:before, .fa-pull-right.icon-contact:before, .fa-pull-right.icon-invoice:before, .jstEditor:not(.zen) button.fa-pull-right.jstb_zenedit:before, .fa-pull-right#invoice_contact_id_add_link:before {
+.fa.fa-pull-right, .jstElements button.fa-pull-right[type="button"]:before, #top-menu a.fa-pull-right:before, #top-menu .fa-pull-right.icon-add.checklist-new-only:before, #top-menu #account .fa-pull-right.login:before, #top-menu #account .fa-pull-right.register:before, #admin-menu a.fa-pull-right:before, #admin-menu .fa-pull-right.icon-add.checklist-new-only:before, tr.project .fa-pull-right[id^="favorite_project"], tr span.fa-pull-right.expander:before, table.boards a.fa-pull-right.board:before, table.boards .fa-pull-right.board.icon-add.checklist-new-only:before, h3.fa-pull-right.comments:before, h3.fa-pull-right.version:before, div.issues h3.fa-pull-right:before, div.members h3.fa-pull-right:before, div.news h3.fa-pull-right:before, div.projects h3.fa-pull-right:before, #watchers a.fa-pull-right.delete:before, #watchers .fa-pull-right.delete.icon-add.checklist-new-only:before, span.search_for_watchers a.fa-pull-right:before, span.search_for_watchers .fa-pull-right.icon-add.checklist-new-only:before, span.add_attachment a.fa-pull-right:before, span.add_attachment .fa-pull-right.icon-add.checklist-new-only:before, fieldset.collapsible > legend.fa-pull-right:before, .fa-pull-right.my-project:before, span.fa-pull-right.icon-search:before, table.cal .starting a.fa-pull-right:before, table.cal .starting .fa-pull-right.icon-add.checklist-new-only:before, p.cal.legend .fa-pull-right.starting:before, table.cal .ending a.fa-pull-right:before, table.cal .ending .fa-pull-right.icon-add.checklist-new-only:before, p.cal.legend .fa-pull-right.ending:before, table.cal .starting.ending .fa-pull-right.icon-add.checklist-new-only:before, button.fa-pull-right.tab-left:before, button.fa-pull-right.tab-right:before, a.fa-pull-right.close-icon:before, .fa-pull-right.close-icon.icon-add.checklist-new-only:before, .fa-pull-right.icon:before, .fa-pull-right#impersonate:before, .fa-pull-right.tweaks:before, .fa-pull-right.login-audit:before, .fa-pull-right[class*="icon-"]:before, .fa-pull-right.sort-handle:before, #context-menu li a.fa-pull-right:before, #context-menu li .fa-pull-right.icon-add.checklist-new-only:before, tr.project.idnt td.name span.fa-pull-right:before, tr.issue.idnt td.subject a.fa-pull-right:before, tr.issue.idnt td.subject .fa-pull-right.icon-add.checklist-new-only:before, dt.fa-pull-right.time-entry:before, dt.fa-pull-right.attachment:before, dt.fa-pull-right.issue-closed:before, .fa-pull-right.icon-contact:before, .fa-pull-right.icon-invoice:before, .jstEditor:not(.zen) button.fa-pull-right.jstb_zenedit:before, .fa-pull-right#invoice_contact_id_add_link:before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -2546,10 +2557,10 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .jstElements button.pull-left[type="button"]:before, #top-menu a.pull-left:before, #top-menu .pull-left.icon-add.checklist-new-only:before, #top-menu #account .pull-left.login:before, #top-menu #account .pull-left.register:before, #admin-menu a.pull-left:before, #admin-menu .pull-left.icon-add.checklist-new-only:before, tr.project .pull-left[id^="favorite_project"], tr span.pull-left.expander:before, table.boards a.pull-left.board:before, table.boards .pull-left.board.icon-add.checklist-new-only:before, h3.pull-left.comments:before, h3.pull-left.version:before, div.issues h3.pull-left:before, div.members h3.pull-left:before, div.news h3.pull-left:before, div.projects h3.pull-left:before, #watchers a.pull-left.delete:before, #watchers .pull-left.delete.icon-add.checklist-new-only:before, span.search_for_watchers a.pull-left:before, span.search_for_watchers .pull-left.icon-add.checklist-new-only:before, span.add_attachment a.pull-left:before, span.add_attachment .pull-left.icon-add.checklist-new-only:before, fieldset.collapsible > legend.pull-left:before, .pull-left.my-project:before, span.pull-left.icon-search:before, table.cal .starting a.pull-left:before, table.cal .starting .pull-left.icon-add.checklist-new-only:before, p.cal.legend .pull-left.starting:before, table.cal .ending a.pull-left:before, table.cal .ending .pull-left.icon-add.checklist-new-only:before, p.cal.legend .pull-left.ending:before, button.pull-left.tab-left:before, button.pull-left.tab-right:before, a.pull-left.close-icon:before, .pull-left.close-icon.icon-add.checklist-new-only:before, .pull-left.icon:before, .pull-left#impersonate:before, .pull-left.tweaks:before, .pull-left.login-audit:before, .pull-left[class*="icon-"]:before, .pull-left.sort-handle:before, #context-menu li a.pull-left:before, #context-menu li .pull-left.icon-add.checklist-new-only:before, tr.project.idnt td.name span.pull-left:before, tr.issue.idnt td.subject a.pull-left:before, tr.issue.idnt td.subject .pull-left.icon-add.checklist-new-only:before, dt.pull-left.time-entry:before, dt.pull-left.attachment:before, dt.pull-left.issue-closed:before, .pull-left.icon-contact:before, .pull-left.icon-invoice:before, .jstEditor:not(.zen) button.pull-left.jstb_zenedit:before, .pull-left#invoice_contact_id_add_link:before {
+.fa.pull-left, .jstElements button.pull-left[type="button"]:before, #top-menu a.pull-left:before, #top-menu .pull-left.icon-add.checklist-new-only:before, #top-menu #account .pull-left.login:before, #top-menu #account .pull-left.register:before, #admin-menu a.pull-left:before, #admin-menu .pull-left.icon-add.checklist-new-only:before, tr.project .pull-left[id^="favorite_project"], tr span.pull-left.expander:before, table.boards a.pull-left.board:before, table.boards .pull-left.board.icon-add.checklist-new-only:before, h3.pull-left.comments:before, h3.pull-left.version:before, div.issues h3.pull-left:before, div.members h3.pull-left:before, div.news h3.pull-left:before, div.projects h3.pull-left:before, #watchers a.pull-left.delete:before, #watchers .pull-left.delete.icon-add.checklist-new-only:before, span.search_for_watchers a.pull-left:before, span.search_for_watchers .pull-left.icon-add.checklist-new-only:before, span.add_attachment a.pull-left:before, span.add_attachment .pull-left.icon-add.checklist-new-only:before, fieldset.collapsible > legend.pull-left:before, .pull-left.my-project:before, span.pull-left.icon-search:before, table.cal .starting a.pull-left:before, table.cal .starting .pull-left.icon-add.checklist-new-only:before, p.cal.legend .pull-left.starting:before, table.cal .ending a.pull-left:before, table.cal .ending .pull-left.icon-add.checklist-new-only:before, p.cal.legend .pull-left.ending:before, table.cal .starting.ending .pull-left.icon-add.checklist-new-only:before, button.pull-left.tab-left:before, button.pull-left.tab-right:before, a.pull-left.close-icon:before, .pull-left.close-icon.icon-add.checklist-new-only:before, .pull-left.icon:before, .pull-left#impersonate:before, .pull-left.tweaks:before, .pull-left.login-audit:before, .pull-left[class*="icon-"]:before, .pull-left.sort-handle:before, #context-menu li a.pull-left:before, #context-menu li .pull-left.icon-add.checklist-new-only:before, tr.project.idnt td.name span.pull-left:before, tr.issue.idnt td.subject a.pull-left:before, tr.issue.idnt td.subject .pull-left.icon-add.checklist-new-only:before, dt.pull-left.time-entry:before, dt.pull-left.attachment:before, dt.pull-left.issue-closed:before, .pull-left.icon-contact:before, .pull-left.icon-invoice:before, .jstEditor:not(.zen) button.pull-left.jstb_zenedit:before, .pull-left#invoice_contact_id_add_link:before {
   margin-right: .3em; }
 
-.fa.pull-right, .jstElements button.pull-right[type="button"]:before, #top-menu a.pull-right:before, #top-menu .pull-right.icon-add.checklist-new-only:before, #top-menu #account .pull-right.login:before, #top-menu #account .pull-right.register:before, #admin-menu a.pull-right:before, #admin-menu .pull-right.icon-add.checklist-new-only:before, tr.project .pull-right[id^="favorite_project"], tr span.pull-right.expander:before, table.boards a.pull-right.board:before, table.boards .pull-right.board.icon-add.checklist-new-only:before, h3.pull-right.comments:before, h3.pull-right.version:before, div.issues h3.pull-right:before, div.members h3.pull-right:before, div.news h3.pull-right:before, div.projects h3.pull-right:before, #watchers a.pull-right.delete:before, #watchers .pull-right.delete.icon-add.checklist-new-only:before, span.search_for_watchers a.pull-right:before, span.search_for_watchers .pull-right.icon-add.checklist-new-only:before, span.add_attachment a.pull-right:before, span.add_attachment .pull-right.icon-add.checklist-new-only:before, fieldset.collapsible > legend.pull-right:before, .pull-right.my-project:before, span.pull-right.icon-search:before, table.cal .starting a.pull-right:before, table.cal .starting .pull-right.icon-add.checklist-new-only:before, p.cal.legend .pull-right.starting:before, table.cal .ending a.pull-right:before, table.cal .ending .pull-right.icon-add.checklist-new-only:before, p.cal.legend .pull-right.ending:before, button.pull-right.tab-left:before, button.pull-right.tab-right:before, a.pull-right.close-icon:before, .pull-right.close-icon.icon-add.checklist-new-only:before, .pull-right.icon:before, .pull-right#impersonate:before, .pull-right.tweaks:before, .pull-right.login-audit:before, .pull-right[class*="icon-"]:before, .pull-right.sort-handle:before, #context-menu li a.pull-right:before, #context-menu li .pull-right.icon-add.checklist-new-only:before, tr.project.idnt td.name span.pull-right:before, tr.issue.idnt td.subject a.pull-right:before, tr.issue.idnt td.subject .pull-right.icon-add.checklist-new-only:before, dt.pull-right.time-entry:before, dt.pull-right.attachment:before, dt.pull-right.issue-closed:before, .pull-right.icon-contact:before, .pull-right.icon-invoice:before, .jstEditor:not(.zen) button.pull-right.jstb_zenedit:before, .pull-right#invoice_contact_id_add_link:before {
+.fa.pull-right, .jstElements button.pull-right[type="button"]:before, #top-menu a.pull-right:before, #top-menu .pull-right.icon-add.checklist-new-only:before, #top-menu #account .pull-right.login:before, #top-menu #account .pull-right.register:before, #admin-menu a.pull-right:before, #admin-menu .pull-right.icon-add.checklist-new-only:before, tr.project .pull-right[id^="favorite_project"], tr span.pull-right.expander:before, table.boards a.pull-right.board:before, table.boards .pull-right.board.icon-add.checklist-new-only:before, h3.pull-right.comments:before, h3.pull-right.version:before, div.issues h3.pull-right:before, div.members h3.pull-right:before, div.news h3.pull-right:before, div.projects h3.pull-right:before, #watchers a.pull-right.delete:before, #watchers .pull-right.delete.icon-add.checklist-new-only:before, span.search_for_watchers a.pull-right:before, span.search_for_watchers .pull-right.icon-add.checklist-new-only:before, span.add_attachment a.pull-right:before, span.add_attachment .pull-right.icon-add.checklist-new-only:before, fieldset.collapsible > legend.pull-right:before, .pull-right.my-project:before, span.pull-right.icon-search:before, table.cal .starting a.pull-right:before, table.cal .starting .pull-right.icon-add.checklist-new-only:before, p.cal.legend .pull-right.starting:before, table.cal .ending a.pull-right:before, table.cal .ending .pull-right.icon-add.checklist-new-only:before, p.cal.legend .pull-right.ending:before, table.cal .starting.ending .pull-right.icon-add.checklist-new-only:before, button.pull-right.tab-left:before, button.pull-right.tab-right:before, a.pull-right.close-icon:before, .pull-right.close-icon.icon-add.checklist-new-only:before, .pull-right.icon:before, .pull-right#impersonate:before, .pull-right.tweaks:before, .pull-right.login-audit:before, .pull-right[class*="icon-"]:before, .pull-right.sort-handle:before, #context-menu li a.pull-right:before, #context-menu li .pull-right.icon-add.checklist-new-only:before, tr.project.idnt td.name span.pull-right:before, tr.issue.idnt td.subject a.pull-right:before, tr.issue.idnt td.subject .pull-right.icon-add.checklist-new-only:before, dt.pull-right.time-entry:before, dt.pull-right.attachment:before, dt.pull-right.issue-closed:before, .pull-right.icon-contact:before, .pull-right.icon-invoice:before, .jstEditor:not(.zen) button.pull-right.jstb_zenedit:before, .pull-right#invoice_contact_id_add_link:before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -2567,6 +2578,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 @keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -2574,6 +2586,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
@@ -4735,6 +4748,7 @@ div.members h3:before {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @-moz-keyframes pace-spinner {
   0% {
     -moz-transform: rotate(0deg);
@@ -4742,6 +4756,7 @@ div.members h3:before {
   100% {
     -moz-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @-o-keyframes pace-spinner {
   0% {
     -o-transform: rotate(0deg);
@@ -4749,6 +4764,7 @@ div.members h3:before {
   100% {
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @-ms-keyframes pace-spinner {
   0% {
     -ms-transform: rotate(0deg);
@@ -4756,6 +4772,7 @@ div.members h3:before {
   100% {
     -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @keyframes pace-spinner {
   0% {
     transform: rotate(0deg);
@@ -4763,6 +4780,7 @@ div.members h3:before {
   100% {
     transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 li.change {
   background-image: url(../images/bullet_black.png); }
 
@@ -4840,8 +4858,10 @@ li.change.change-D {
   cursor: pointer; }
   .jstElements button[type="button"]:before {
     text-align: center; }
+
 .jstElements .jstb_h2:before {
   font-size: 0.9em !important; }
+
 .jstElements .jstb_h3:before {
   font-size: 0.8em !important; }
 
@@ -4862,15 +4882,18 @@ li.change.change-D {
 #main #sidebar .watchers li img.gravatar {
   margin: 0.5em;
   float: left; }
+
 #main #sidebar .watchers li a.user, #main #sidebar .watchers li .user.icon-add.checklist-new-only {
   width: 80%;
   display: block;
   float: left; }
+
 #main #sidebar .watchers li a.delete, #main #sidebar .watchers li .delete.icon-add.checklist-new-only {
   width: 10%;
   text-align: center;
   display: block;
   float: left; }
+
 #main #sidebar .watchers li a.delete:before, #main #sidebar .watchers li .delete.icon-add.checklist-new-only:before {
   margin: 0; }
 
@@ -4881,6 +4904,7 @@ div.issue div.attributes .attribute {
   div.issue div.attributes .attribute .label {
     font-weight: bold;
     margin-right: 1em; }
+
 div.issue div.attributes .attribute.progress .value {
   min-width: 200px; }
   div.issue div.attributes .attribute.progress .value p {
@@ -5191,6 +5215,7 @@ select {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
 #admin-menu a, #admin-menu .icon-add.checklist-new-only {
   background-image: none !important;
   margin-bottom: 0.2em; }
@@ -5203,6 +5228,7 @@ select {
 
 .sidebar-collapsed #content {
   width: 100% !important; }
+
 .sidebar-collapsed #sidebar {
   display: none !important; }
 
@@ -5250,16 +5276,16 @@ select {
         display: inline-block; }
       #main #sidebar ul li label input {
         margin-right: 0.7em; }
-    #main #sidebar ul a, #main #sidebar ul .icon-add.checklist-new-only, #main #sidebar a[href$="agile/board"], #main #sidebar [href$="agile/board"].icon-add.checklist-new-only, #main #sidebar a[href$="agile_versions"], #main #sidebar [href$="agile_versions"].icon-add.checklist-new-only {
+    #main #sidebar ul a, #main #sidebar ul .icon-add.checklist-new-only, #main #sidebar a[href$="agile/board"], #main #sidebar .icon-add.checklist-new-only[href$="agile/board"], #main #sidebar a[href$="agile_versions"], #main #sidebar .icon-add.checklist-new-only[href$="agile_versions"] {
       display: inline-block;
       width: 100%;
       border-radius: 4px;
       padding: 0.5em;
       color: #777777;
       margin-bottom: 0.2em; }
-      #main #sidebar ul a:hover, #main #sidebar ul .icon-add.checklist-new-only:hover, #main #sidebar a[href$="agile/board"]:hover, #main #sidebar [href$="agile/board"].icon-add.checklist-new-only:hover, #main #sidebar a[href$="agile_versions"]:hover, #main #sidebar [href$="agile_versions"].icon-add.checklist-new-only:hover {
+      #main #sidebar ul a:hover, #main #sidebar ul .icon-add.checklist-new-only:hover, #main #sidebar a[href$="agile/board"]:hover, #main #sidebar .icon-add.checklist-new-only[href$="agile/board"]:hover, #main #sidebar a[href$="agile_versions"]:hover, #main #sidebar .icon-add.checklist-new-only[href$="agile_versions"]:hover {
         background: #F2F2F2; }
-      #main #sidebar ul a.selected, #main #sidebar ul .selected.icon-add.checklist-new-only, #main #sidebar a[href$="agile/board"].selected, #main #sidebar [href$="agile/board"].selected.icon-add.checklist-new-only, #main #sidebar a[href$="agile_versions"].selected, #main #sidebar [href$="agile_versions"].selected.icon-add.checklist-new-only {
+      #main #sidebar ul a.selected, #main #sidebar ul .selected.icon-add.checklist-new-only, #main #sidebar a[href$="agile/board"].selected, #main #sidebar .icon-add.checklist-new-only[href$="agile/board"].selected, #main #sidebar a[href$="agile_versions"].selected, #main #sidebar .icon-add.checklist-new-only[href$="agile_versions"].selected {
         background: #446E9B;
         color: white; }
     #main #sidebar table tr {
@@ -5326,16 +5352,20 @@ select {
 /* Login */
 #login-form input#username, #login-form #login-form input#password {
   width: 20em; }
+
 #login-form table {
   margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
   padding: 1em; }
+
 #login-form td {
   padding: 0.5em;
   text-align: right; }
+
 #login-form tr {
   background: none !important; }
+
 #login-form #username, #login-form #password {
   width: 100%; }
 
@@ -6039,8 +6069,10 @@ p.pagination {
     .tabular p.live_search:before {
       left: 15.6em;
       top: 0.3em; }
+
 .tabular span[title] {
   border-bottom: 1px dotted #F2F2F2; }
+
 .tabular label {
   font-weight: 600;
   float: left;
@@ -6065,8 +6097,10 @@ p.pagination {
     float: none;
     margin-left: 0.5em !important;
     width: auto; }
+
 .tabular .settings p {
   padding-left: 20em; }
+
 .tabular .settings label {
   margin-left: -20em;
   width: 19.5em; }
@@ -7223,6 +7257,7 @@ div.contact.details table.subject_header h1 {
 #invoice_contact_id_add_link:before {
   margin-left: 0.5em;
   font-size: 1.2em; }
+
 #invoice_contact_id_add_link img {
   display: none !important; }
 
@@ -7273,6 +7308,7 @@ div.contact.details table.subject_header h1 {
   padding-top: 1em; }
   #comments h4:first-of-type {
     border: 0; }
+
 #comments + p > a, #comments + p > .icon-add.checklist-new-only {
   margin-top: 2em; }
 
@@ -7307,7 +7343,6 @@ div[style*="clear:both"], div[style*="clear: both"] {
 @media print {
   #main {
     background: #fff; }
-
   #content {
     width: 99%;
     border: 0;
@@ -7315,18 +7350,15 @@ div[style*="clear:both"], div[style*="clear: both"] {
     overflow: visible !important;
     margin: 0;
     padding: 0; }
-
   .autoscroll {
     overflow-x: visible; }
-
   table.list {
     margin-top: 0.5em; }
-
   table.list th, table.list td {
     border: 1px solid #aaa; }
-
   #top-menu, #header, #main-menu, #sidebar, #footer, .contextual, .other-formats, #wiki_add_attachment, .hide-when-print {
     display: none; } }
+
 .row:after {
   display: block;
   clear: both;
@@ -7359,39 +7391,37 @@ div[style*="clear:both"], div[style*="clear: both"] {
 .col-12 { width:100%; }
 */
 .col-1 {
-  width: 5.5833333333%; }
+  width: 5.58333%; }
 
 .col-2 {
-  width: 14.1666666667%; }
+  width: 14.16667%; }
 
 .col-3 {
   width: 22.75%; }
 
 .col-4 {
-  width: 31.3333333333%; }
+  width: 31.33333%; }
 
 .col-5 {
-  width: 39.9166666667%; }
+  width: 39.91667%; }
 
 .col-6 {
   width: 48.5%; }
 
 .col-7 {
-  width: 57.0833333333%; }
+  width: 57.08333%; }
 
 .col-8 {
-  width: 65.6666666667%; }
+  width: 65.66667%; }
 
 .col-9 {
   width: 74.25%; }
 
 .col-10 {
-  width: 82.8333333333%; }
+  width: 82.83333%; }
 
 .col-11 {
-  width: 91.4166666667%; }
+  width: 91.41667%; }
 
 .col-12 {
   width: 100%; }
-
-/*# sourceMappingURL=style.css.map */
