@@ -15,10 +15,10 @@ gulp.task('sass', function(){
 
 gulp.task('sass-theme', function(){
   return gulp.src('assets/theme/simple/scss/*.scss')
-    .pipe(debug({path: path}))
+    // .pipe(debug({path: path}))
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
-    .pipe(gulp.dest('assets/theme/simple/css'))
-    .pipe(debug({path2: path}));
+    .pipe(gulp.dest('assets/theme/simple/css'));
+    // .pipe(debug({path2: path}));
 });
 
 //gulp watch
