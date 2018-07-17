@@ -12,6 +12,9 @@ const morgan = require('morgan');
 const passport = require('passport');
 const dbconfig = require('./config/database');
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger-config.json');
+
 const port = process.env.port || 4000;
 
 const GenerateRoute = require('./routes/GenerateRoute');
@@ -37,16 +40,13 @@ app.use(passport.initialize());
 app.use(express.static('assets'));
 
 
-app.get('/', function(req, res) {
-    res.send('Page under construction.');
-});
-  
 app.use('/api', api);
 
-
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/generate', GenerateRoute);
+
 app.listen(process.env.PORT || 4000, function(){
-	console.log("Running");
+    console.log("Running... api is at http://localhost:4000/api");
+    console.log("swagger is at http://localhost:4000/api-docs");
 })

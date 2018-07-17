@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var passport = require('passport');
-var config = require('../config/database');
+var dbconfig = require('../config/database');
 require('../config/passport')(passport);
 var express = require('express');
 var jwt = require('jsonwebtoken');
@@ -39,7 +39,7 @@ router.post('/signup', function(req, res) {
         user.comparePassword(req.body.password, function (err, isMatch) {
           if (isMatch && !err) {
             // if user is found and password is right create a token
-            var token = jwt.sign(user.toJSON(), config.secret);
+            var token = jwt.sign(user.toJSON(), dbconfig.secret);
             // return the information including token as JSON
             res.json({success: true, token: 'JWT ' + token});
           } else {
@@ -64,11 +64,16 @@ router.post('/signup', function(req, res) {
     }
   };
 
+  function getAuthUser(headers){
+    return jwt.decode(getToken(headers), dbconfig.secret);
+  }
+
 
 
   router.get('/test', passport.authenticate('jwt', { session: false}), function(req, res) {
     var token = getToken(req.headers);
     if (token) {
+      console.log(getAuthUser(req.headers));
       res.json({success: true, msg: 'Successfully accessed protected resource'});
     } else {
       return res.status(403).send({success: false, msg: 'Unauthorized.'});

@@ -1,0 +1,275 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Resumator",
+    "description": "Web application to manage job applicants' resumes"
+  },
+  "host": "localhost:4000",
+  "basePath": "/api",
+  "securityDefinitions": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "http://localhost:4000/api",
+      "scopes": {},
+      "x-skip-client-authentication": false
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/signup": {
+      "post": {
+        "description": "Create a new user account\n",
+        "summary": "local sign up",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "SignupPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LocalSignUprequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/signup",
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "body": "{\"username\":\"chris\",\"password\":\"pass123\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "local sign up",
+            "x-testDescription": "Create a new user account\n"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/signin": {
+      "post": {
+        "description": "login user",
+        "summary": "local sign in",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "SigninPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LocalSignInrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/signin",
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "body": "{\"username\":\"chris\",\"password\":\"pass123\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "local sign in",
+            "x-testDescription": "login user"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/test": {
+      "get": {
+        "description": "protected endpoint accessible only to authed user",
+        "summary": "test protected endpoint",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "TestGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/test",
+              "headers": {
+                "Content-Type": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "test protected endpoint",
+            "x-testDescription": "protected endpoint accessible only to authed user"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "LocalSignUprequest": {
+      "title": "local sign upRequest",
+      "example": {
+        "username": "chris",
+        "password": "pass123"
+      },
+      "type": "object",
+      "properties": {
+        "username": {
+          "description": "",
+          "example": "chris",
+          "type": "string"
+        },
+        "password": {
+          "description": "",
+          "example": "pass123",
+          "type": "string"
+        }
+      },
+      "required": [
+        "username",
+        "password"
+      ]
+    },
+    "LocalSignInrequest": {
+      "title": "local sign inRequest",
+      "example": {
+        "username": "chris",
+        "password": "pass123"
+      },
+      "type": "object",
+      "properties": {
+        "username": {
+          "description": "",
+          "example": "chris",
+          "type": "string"
+        },
+        "password": {
+          "description": "",
+          "example": "pass123",
+          "type": "string"
+        }
+      },
+      "required": [
+        "username",
+        "password"
+      ]
+    }
+  }
+}
