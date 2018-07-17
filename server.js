@@ -47,5 +47,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/generate', GenerateRoute);
 
 app.listen(process.env.PORT || 4000, function(){
-	console.log("Running");
+    console.log("Running... api is at http://localhost:4000/api");
+    console.log("swagger is at http://localhost:4000/api-docs");
 })
