@@ -1,4 +1,18 @@
 @charset "UTF-8";
+/* Framework variables */
+/* 
+  Colors used by this Theme
+  Redefining these variables will redefine all colors
+ */
+/* 
+  Fonts used by this Theme
+  Redefining these variables will redefine all fonts
+ */
+/* 
+  UI Colors usage (this section allows fine tune override in the _overrides.scss
+  by changing only the appropriate item
+*/
+/* Animations */
 /* vietnamese */
 @font-face {
   font-family: 'Asap';
@@ -73,7 +87,38 @@
 
 section, .section {
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin: 2em 0;
+  position: relative; }
+  section-bg, .section-bg {
+    margin: 0; }
+    section-bg--light-grey, .section-bg--light-grey {
+      background-color: #F2F2F2; }
+    section-bg--grey, .section-bg--grey {
+      background-color: #777777;
+      color: #F2F2F2; }
+  section-content--white, .section-content--white {
+    background-color: rgba(249, 249, 249, 0.9);
+    color: #333333; }
+  section-content--light-grey, .section-content--light-grey {
+    background-color: rgba(0, 0, 0, 0.052); }
+  section-content--lightest-grey, .section-content--lightest-grey {
+    background-color: rgba(0, 0, 0, 0.009); }
+  section-content--grey, .section-content--grey {
+    background-color: rgba(119, 119, 119, 0.9);
+    color: #F2F2F2; }
+  section-content--right, .section-content--right {
+    text-align: right; }
+  section-content--one-third, .section-content--one-third {
+    margin: -0.5em 1em -0.5em -4.5em !important;
+    padding: 2em 2em 0;
+    width: 35% !important;
+    position: absolute;
+    height: 100%; }
+  section-content--two-third, .section-content--two-third {
+    margin-left: 35%; }
 
 .mt-0 {
   margin-top: 0px !important; }
@@ -403,20 +448,6 @@ section, .section {
       .list-inline-item--social:not(:last-child) {
         margin-right: 1rem; }
 
-/* Framework variables */
-/* 
-  Colors used by this Theme
-  Redefining these variables will redefine all colors
- */
-/* 
-  Fonts used by this Theme
-  Redefining these variables will redefine all fonts
- */
-/* 
-  UI Colors usage (this section allows fine tune override in the _overrides.scss
-  by changing only the appropriate item
-*/
-/* Animations */
 .text-block {
   display: block; }
 
@@ -5375,7 +5406,7 @@ html {
 
 body {
   color: #333333;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.4;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
@@ -7793,7 +7824,6 @@ div[style*="clear:both"], div[style*="clear: both"] {
 
 [class^="col-"] {
   float: left;
-  margin-right: 3%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }

@@ -23,6 +23,11 @@ model['twitter'] = "http://google.com";
 model['facebook'] = "http://google.com";
 model['github'] = "http://google.com";
 model['instagram'] = "http://google.com";
+model['city'] = "Portland";
+model['country'] = "OR";
+model['phone_1'] = "534.456.886";
+model['email'] = "hello@example.com";
+model['website'] = "www.example.com";
 
 const tmpl = compiledtpl(model);
 // const tmpl = fs.readFileSync('assets/businesscard.html', 'utf8')
