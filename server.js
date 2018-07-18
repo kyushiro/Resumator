@@ -18,7 +18,8 @@ const swaggerDocument = require('./swagger-config.json');
 const port = process.env.port || 4000;
 
 const GenerateRoute = require('./routes/GenerateRoute');
-
+const UserRoute = require('./routes/users');
+const ResumeRoute = require('./routes/resumes');
 app.use(bodyParser.json());
 
 // mongoose.connect(dbConfig.path).then(
@@ -27,8 +28,6 @@ app.use(bodyParser.json());
 // );
 
 mongoose.connect(dbconfig.database, { useNewUrlParser: true });
-
-var api = require('./routes/api');
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -40,7 +39,9 @@ app.use(passport.initialize());
 app.use(express.static('assets'));
 
 
-app.use('/api', api);
+// app.use('/api', api);
+app.use('/api/users',UserRoute);
+app.use('/api/resumes',ResumeRoute);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
