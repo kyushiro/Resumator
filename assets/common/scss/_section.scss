@@ -1,4 +1,47 @@
 section, .section{
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin: 2em 0;
+  position: relative;
+  &-bg{
+    margin: 0;
+    &--light-grey{
+      background-color: $light-grey;
+    }
+    &--grey{
+      background-color: $grey;
+      color: $light-grey;
+    }
+  }
+  &-content{
+    &--white{
+      background-color: rgba($white, .9);
+      color: $text;
+    }
+    &--light-grey{
+      background-color: rgba($black, .052);
+    }
+    &--lightest-grey{
+      background-color: rgba($black, .009);
+    }
+    &--grey{
+      background-color: rgba($grey, .9);
+      color: $light-grey;
+    }
+    &--right{
+      text-align: right;
+    }
+    &--one-third{
+      margin: -0.5em 1em -0.5em -4.5em !important;
+      padding: 2em 2em 0;
+      width: 35% !important;
+      position: absolute;
+      height: 100%;
+    }
+    &--two-third{
+      margin-left: 35%;
+    }
+  }
 }

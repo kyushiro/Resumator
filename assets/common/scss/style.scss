@@ -1,3 +1,7 @@
+// Variables
+@import "variables";
+@import "variables_overrides";
+
 @import "fonts";
 @import "section";
 @import "spacing-helpers";
@@ -5,10 +9,6 @@
 // Frameworks
 //@import "bourbon";
 //@import "neat";
-
-// Variables
-@import "variables";
-@import "variables_overrides";
 
 //Text
 @import "typography";
@@ -50,7 +50,7 @@ html {
 
 body {
   color: $text;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.4;
   font-family: $font-body;
   text-rendering: optimizeLegibility;
@@ -4094,7 +4094,7 @@ $grid-spacing:3%;
 
 [class^="col-"] {
   float:left;
-  margin-right:$grid-spacing;
+  //margin-right:$grid-spacing;
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
