@@ -78,6 +78,19 @@ var ResumeSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     required:true
   },
+  theme: {
+    type: String,
+    required: true,
+    default: 'simple'
+  },
+  label: {
+    type: String,
+    required: false
+  },
+  uuid: {
+    type: String,
+    required: true
+  },
   first_name: {
     type: String,
     required: true

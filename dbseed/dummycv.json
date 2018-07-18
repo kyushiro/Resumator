@@ -1,0 +1,27 @@
+{
+    "theme": "simple",
+    "label": "My first CV",
+    "first_name": "Christophe",
+    "last_name": "Ramsamy",
+    "address_1":"Moon villa 2",
+    "address_2": "Casse ghoon lane",
+    "city":"Grand baie",
+    "country": "Mauritius",
+    "phone_1": "+230 269 14 12",
+    "phone_2": "+230 5 712 74 42",
+    "email": "christophe.kun@gmail.com",
+    "current_job_title": "Freelance computer whisperer",
+    "twitter": "_kyushiro",
+    "bio": "I am a zombie and i like oranges. i like eating them when i am hungry. i go buy oranges every chance i get because they are awesome",
+    "date_submitted": "2018-02-23",
+    "skills": [
+        {
+            "skill_name": "Javascript",
+            "skill_level": 8
+        },
+        {
+            "skill_name": "Mongodb",
+            "skill_level": 7
+        }
+    ]
+  }

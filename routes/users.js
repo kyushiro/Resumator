@@ -6,11 +6,10 @@ var express = require('express');
 var jwt = require('jsonwebtoken');
 var router = express.Router();
 var User = require("../models/user");
-var Resume = require("../models/resume");
 
 router.post('/signup', function(req, res) {
     if (!req.body.username || !req.body.password) {
-      res.json({success: false, msg: 'Please pass username and password.'});
+      res.status(400).json({success: false, msg: 'Please pass username and password.'});
     } else {
       var newUser = new User({
         username: req.body.username,
@@ -21,10 +20,11 @@ router.post('/signup', function(req, res) {
         if (err) {
           return res.json({success: false, msg: 'Username already exists.'});
         }
-        res.json({success: true, msg: 'Successful created new user.'});
+        res.json({success: true, msg: 'Registration successful!'});
       });
     }
   });
+
 
   router.post('/signin', function(req, res) {
     User.findOne({
@@ -50,34 +50,5 @@ router.post('/signup', function(req, res) {
     });
   });
 
-
-  getToken = function (headers) {
-    if (headers && headers.authorization) {
-      var parted = headers.authorization.split(' ');
-      if (parted.length === 2) {
-        return parted[1];
-      } else {
-        return null;
-      }
-    } else {
-      return null;
-    }
-  };
-
-  function getAuthUser(headers){
-    return jwt.decode(getToken(headers), dbconfig.secret);
-  }
-
-
-
-  router.get('/test', passport.authenticate('jwt', { session: false}), function(req, res) {
-    var token = getToken(req.headers);
-    if (token) {
-      console.log(getAuthUser(req.headers));
-      res.json({success: true, msg: 'Successfully accessed protected resource'});
-    } else {
-      return res.status(403).send({success: false, msg: 'Unauthorized.'});
-    }
-  });
 
   module.exports = router;
