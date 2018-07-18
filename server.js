@@ -22,12 +22,12 @@ const UserRoute = require('./routes/users');
 const ResumeRoute = require('./routes/resumes');
 app.use(bodyParser.json());
 
-// mongoose.connect(dbConfig.path).then(
-//    () => { console.log("db connection successful") },
-//    err => { console.log("db connection failed, "+err) }
-// );
+mongoose.connect(dbconfig.database, { useNewUrlParser: true }).then(
+   () => { console.log("db connection successful") },
+   err => { console.log("db connection failed, "+err) }
+);
 
-mongoose.connect(dbconfig.database, { useNewUrlParser: true });
+// mongoose.connect(dbconfig.database, { useNewUrlParser: true });
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
