@@ -22,16 +22,18 @@ html
           - var githubLink = github
           - var instagramLink = instagram
           ul.list-unstyled
-            li
-              a(href=linkedIn, target='_blank')
-                p
-                  i.fa.fa-linkedin-square.mr-5
-                  small #{linkedIn}
-            li
-              a(href=twitterLink, target='_blank')
-                p
-                  i.fa.fa-twitter-square.mr-5
-                  small #{twitterLink}
+            if linkedin
+              li
+                a(href=linkedIn, target='_blank')
+                  p
+                    i.fa.fa-linkedin-square.mr-5
+                    small #{linkedIn}
+            if twitter
+              li
+                a(href=twitterLink, target='_blank')
+                  p
+                    i.fa.fa-twitter-square.mr-5
+                    small #{twitterLink}
             li
               a(href=facebookLink, target='_blank')
                 p
