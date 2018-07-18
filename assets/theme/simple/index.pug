@@ -12,9 +12,9 @@ html
         .col-8
           .header
             h1.header-title.mb-20
-              span.text-block.text-first #{first_name} first name
-              span.text-block.text-last #{last_name} last name
-            h2.sub-title #{current_job_title} Job title
+              span.text-block.text-first #{first_name}
+              span.text-block.text-last #{last_name}
+            h2.sub-title #{current_job_title}
         .col-4.text-right
           - var linkedIn = linkedin
           - var twitterLink = twitter
@@ -51,7 +51,8 @@ html
         - var cityName = city
         - var countryName = country
         - var phoneNum = phone_1
-        - var emailAdd = "mailto:" + email
+        - var emailAddmail = "mailto:" + email
+        - var emailAdd = email
         - var websiteLink = website
         .col-3
           h4 Location
@@ -62,7 +63,7 @@ html
         .col-3
           h4 Email
           p
-            a(href=emailAdd) #{emailAdd}
+            a(href=emailAddmail) #{emailAdd}
         .col-3
           h4 Website
           p
@@ -159,7 +160,7 @@ html
                   | Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo,
                   | eget blandit nunc tortor eu nibh. Nullam mollis.
 
-    .section
+    //.section
       .row
         .col-4
           .page
