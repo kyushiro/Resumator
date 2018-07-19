@@ -1,7 +1,9 @@
 html
   head
     meta(charset="utf8")
-    title SuitArt Business Card
+    title Simple theme CV
+    link(rel='stylesheet', href="//fonts.googleapis.com/css?family=Lato")
+    link(rel='stylesheet', href="//fonts.googleapis.com/css?family=Arimo")
     - var stylesheetCommonLink = theme_common_resources + '/css/style.css'
     - var stylesheetLink = theme_path + '/css/simple.css'
     link(rel='stylesheet', href=stylesheetCommonLink)
@@ -15,7 +17,7 @@ html
               span.text-block.text-first #{first_name}
               span.text-block.text-last #{last_name}
             h2.sub-title #{current_job_title}
-        .col-4.text-right
+        //.col-4.text-right
           ul.list-unstyled
             if linkedin
               li
@@ -83,7 +85,7 @@ html
           .col-8.section-content--two-third.pb-20
             if bio
               p #{bio}
-    .section.section-bg.section-bg--grey
+    .section.section-bg.section-bg--medium-light-grey
       .container
         .row
           .col-4.section-content--white.section-content--right.section-content--one-third
@@ -94,8 +96,11 @@ html
               if skills
                 each skill in skills
                   .col-6
-                    h3 #{skill.skill_name}
-                    p #{skill.skill_level}%
+                    h3
+                      small.text-primary #{skill.skill_level}% &nbsp;
+                      | #{skill.skill_name}
+                    .progress-bar
+                      span.progress-bar-fill(style="width:"+skill.skill_level+"%")
     .section.section-bg
       .container
         .row.mb-30
@@ -119,24 +124,61 @@ html
                       small #{exp.location}
                   .col-6
                     p #{exp.description}
-
-
-    //.section
+    .section.section-bg.section-bg--light-grey
+      .container
+        .row.mb-30
+          .col-4.section-content--light-grey.section-content--right.section-content--one-third
+            h2.section-heading Education
+            p Lazy isn't in my vocabulary.
+          .col-8.section-content--two-third.pt-10
+            if education
+              each edu in education
+                .row.c-timeline-container
+                  .col-1.c-timeline.c-timeline--grey
+                    .c-timeline--point.c-timeline--point--primary
+                    | &nbsp;
+                  .col-5.ml-20
+                    p
+                      small #{edu.date_started.toString().split(" ")[3]} –
+                        span #{edu.date_ended ? edu.date_ended.toString().split(" ")[3] : "Present"}
+                    h3 #{edu.institution_name}
+                    p #{edu.course_name}
+                    p
+                      small #{edu.location}
+                  .col-6
+                    p #{edu.course_description}
+    .section.text-right
+      .border-bottom
       .row
-        .col-4
-          .page
-            .bottom
-              .line #{name}
-              .line #{position}
-              .group
-                .line p: #{phone}
-                .line github: marcbachmann
-              .group
-                .line suitart ag
-                .line räffelstrasse 25
-                .line 8045 zürich
-        .col-8
-          .page
-            img.logo(src=image)
-            .bottom
-              .line.center 8045 zürich
+        .col-12
+          ul.list-inline
+            if linkedin
+              li.list-inline-item
+                a(href=linkedin, target='_blank')
+                  p
+                    i.fa.fa-linkedin-square.mr-5
+                    small #{linkedin}
+            if twitter
+              li.list-inline-item
+                a(href=twitter, target='_blank')
+                  p
+                    i.fa.fa-twitter-square.mr-5
+                    small #{twitter}
+            if facebook
+              li.list-inline-item
+                a(href=facebook, target='_blank')
+                  p
+                    i.fa.fa-facebook-square.mr-5
+                    small #{facebook}
+            if github
+              li.list-inline-item
+                a(href=github, target='_blank')
+                  p
+                    i.fa.fa-github-square.mr-5
+                    small #{github}
+            if instagram
+              li.list-inline-item
+                a(href=instagram, target='_blank')
+                  p
+                    i.fa.fa-instagram.mr-5
+                    small #{instagram}
