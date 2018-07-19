@@ -1,5 +1,4 @@
 .page {
-  background: black;
   page-break-after: auto;
   overflow: hidden; }
 
@@ -34,3 +33,6 @@
   width: 80%;
   left: 10%;
   top: 15%; }
+
+.c-timeline--point--primary {
+  background: #f39c12 !important; }

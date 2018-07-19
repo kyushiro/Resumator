@@ -43,6 +43,7 @@ section, .section{
     &--two-third{
       margin-left: 35%;
       position: relative;
+      min-height: 150px;
     }
   }
 }
