@@ -16,42 +16,37 @@ html
               span.text-block.text-last #{last_name}
             h2.sub-title #{current_job_title}
         .col-4.text-right
-          - var linkedIn = linkedin
-          - var twitterLink = twitter
-          - var facebookLink = facebook
-          - var githubLink = github
-          - var instagramLink = instagram
           ul.list-unstyled
             if linkedin
               li
-                a(href=linkedIn, target='_blank')
+                a(href=linkedin, target='_blank')
                   p
                     i.fa.fa-linkedin-square.mr-5
-                    small #{linkedIn}
+                    small #{linkedin}
             if twitter
               li
-                a(href=twitterLink, target='_blank')
+                a(href=twitter, target='_blank')
                   p
                     i.fa.fa-twitter-square.mr-5
-                    small #{twitterLink}
+                    small #{twitter}
             if facebook
               li
-                a(href=facebookLink, target='_blank')
+                a(href=facebook, target='_blank')
                   p
                     i.fa.fa-facebook-square.mr-5
-                    small #{facebookLink}
+                    small #{facebook}
             if github
               li
-                a(href=githubLink, target='_blank')
+                a(href=github, target='_blank')
                   p
                     i.fa.fa-github-square.mr-5
-                    small #{githubLink}
+                    small #{github}
             if instagram
               li
-                a(href=instagramLink, target='_blank')
+                a(href=instagram, target='_blank')
                   p
                     i.fa.fa-instagram.mr-5
-                    small #{instagramLink}
+                    small #{instagram}
       .row
         - var cityName = city
         - var countryName = country
@@ -96,29 +91,11 @@ html
             p Batman would be jealous.
           .col-8.section-content--two-third
             .row
-              .col-6
-                h3 Advanced CSS
-                p
-                  | Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  | Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.
-              .col-6
-                h3 Front-end Design
-                p
-                  | Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit.
-                  | Pellentesque egestas sem.
-                  | Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.
-            .row
-              .col-6
-                h3 Ruby on Rails
-                p
-                  | Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  | Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.
-              .col-6
-                h3 Object-oriented PHP
-                p
-                  | Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit.
-                  | Pellentesque egestas sem.
-                  | Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.
+              if skills
+                each skill in skills
+                  .col-6
+                    h3 #{skill.skill_name}
+                    p #{skill.skill_level}%
     .section.section-bg
       .container
         .row.mb-30
@@ -126,39 +103,23 @@ html
             h2.section-heading Experience
             p Yes. I've been around.
           .col-8.section-content--two-third.pt-10
-            .row.c-timeline-container
-              .col-1.c-timeline.c-timeline--grey
-                .c-timeline--point.c-timeline--point--primary
-                | &nbsp;
-              .col-5.ml-20
-                p
-                  small  2015 – Present
-                h3 Unicorn Incubator Inc.
-                p Senior Interface Designer
-                p
-                  small Portland, OR
-              .col-6
-                p
-                  | Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  | Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.
-            .row.c-timeline-container
-              .col-1.c-timeline.c-timeline--grey
-                .c-timeline--point.c-timeline--point--primary
-                | &nbsp;
-              .col-5.ml-20
-                p
-                  small  2013 – 2015
-                h3 California Design Bureau
-                p Creative Director
-                p
-                  small Cupertino, CA
-              .col-6
-                p
-                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  | Phasellus hendrerit. Pellentesque aaliquet nibh nec urna.
-                  | In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.
-                  | Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo,
-                  | eget blandit nunc tortor eu nibh. Nullam mollis.
+            if work_experience
+              each exp in work_experience
+                .row.c-timeline-container
+                  .col-1.c-timeline.c-timeline--grey
+                    .c-timeline--point.c-timeline--point--primary
+                    | &nbsp;
+                  .col-5.ml-20
+                    p
+                      small #{exp.date_started.toString().split(" ")[3]} – 
+                        span #{exp.date_ended? exp.date_ended.toString().split(" ")[3] : "Present"}
+                    h3 #{exp.company_name}
+                    p #{exp.position}
+                    p
+                      small #{exp.location}
+                  .col-6
+                    p #{exp.description}
+
 
     //.section
       .row
