@@ -2,8 +2,8 @@ html
   head
     meta(charset="utf8")
     title SuitArt Business Card
-    - var stylesheetLink = theme_path + '/css/simple.css'
     - var stylesheetCommonLink = theme_common_resources + '/css/style.css'
+    - var stylesheetLink = theme_path + '/css/simple.css'
     link(rel='stylesheet', href=stylesheetCommonLink)
     link(rel='stylesheet', href=stylesheetLink)
   body
@@ -34,21 +34,24 @@ html
                   p
                     i.fa.fa-twitter-square.mr-5
                     small #{twitterLink}
-            li
-              a(href=facebookLink, target='_blank')
-                p
-                  i.fa.fa-facebook-square.mr-5
-                  small #{facebookLink}
-            li
-              a(href=githubLink, target='_blank')
-                p
-                  i.fa.fa-github-square.mr-5
-                  small #{githubLink}
-            li
-              a(href=instagramLink, target='_blank')
-                p
-                  i.fa.fa-instagram.mr-5
-                  small #{instagramLink}
+            if facebook
+              li
+                a(href=facebookLink, target='_blank')
+                  p
+                    i.fa.fa-facebook-square.mr-5
+                    small #{facebookLink}
+            if github
+              li
+                a(href=githubLink, target='_blank')
+                  p
+                    i.fa.fa-github-square.mr-5
+                    small #{githubLink}
+            if instagram
+              li
+                a(href=instagramLink, target='_blank')
+                  p
+                    i.fa.fa-instagram.mr-5
+                    small #{instagramLink}
       .row
         - var cityName = city
         - var countryName = country
@@ -56,45 +59,40 @@ html
         - var emailAddmail = "mailto:" + email
         - var emailAdd = email
         - var websiteLink = website
-        .col-3
-          h4 Location
-          p #{cityName}, #{countryName}
-        .col-3
-          h4 Phone
-          p #{phoneNum}
-        .col-3
-          h4 Email
-          p
-            a(href=emailAddmail) #{emailAdd}
+        if city && country
+          .col-3
+            h4 Location
+            p #{cityName}, #{countryName}
+        if phone_1
+          .col-3
+            h4 Phone
+            p #{phoneNum}
+        if email
+          .col-3
+            h4 Email
+            p
+              a(href=emailAddmail) #{emailAdd}
         .col-3
           h4 Website
-          p
-            a(href=websiteLink, target="_blank") #{websiteLink}
+          if website
+            p
+              a(href=websiteLink, target="_blank") #{websiteLink}
+          else
+            p -
     .section.section-bg.section-bg--light-grey
       .container
         .row
           .col-4.section-content--light-grey.section-content--right.section-content--one-third
             h2.section-heading Intro
             p What I am all about.
-          .col-8.section-content--two-third
-            p
-              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.
-              | Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.
-              | Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.
-              | Nullam mollis. Ut justo. Suspendisse potenti.
-              | Nulla vitae mauris non felis mollis faucibus.
-            p
-              | Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue.
-              | Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus.
-              | Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat,
-              | lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.
-              | Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. Fusce lacinia arcu et nulla.
-              | Nulla vitae mauris non felis mollis.
+          .col-8.section-content--two-third.pb-20
+            if bio
+              p #{bio}
     .section.section-bg.section-bg--grey
       .container
         .row
           .col-4.section-content--white.section-content--right.section-content--one-third
-            h2.section-heading Expertise
+            h2.section-heading Skill
             p Batman would be jealous.
           .col-8.section-content--two-third
             .row
@@ -130,7 +128,7 @@ html
           .col-8.section-content--two-third.pt-10
             .row.c-timeline-container
               .col-1.c-timeline.c-timeline--grey
-                .c-timeline--point.c-timeline--point--orange
+                .c-timeline--point.c-timeline--point--primary
                 | &nbsp;
               .col-5.ml-20
                 p
@@ -145,7 +143,7 @@ html
                   | Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.
             .row.c-timeline-container
               .col-1.c-timeline.c-timeline--grey
-                .c-timeline--point.c-timeline--point--orange
+                .c-timeline--point.c-timeline--point--primary
                 | &nbsp;
               .col-5.ml-20
                 p
