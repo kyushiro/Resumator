@@ -1,10 +1,25 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+
+var CertificationSchema = new Schema({
+  certification_name: {
+    type: String,
+    required: true
+  },
+  certification_date: {
+    type: Date,
+    required: true
+  }
+});
 var SkillSchema = new Schema({
     skill_name: {
         type: String,
         required: true
+    },
+    skill_desc: {
+      type: String,
+      required: false
     },
     skill_level: {
         type: Number,
@@ -24,7 +39,7 @@ var LanguageSchema = new Schema({
 });
 
 var EducationSchema = new Schema({
-  organization_name: {
+  institution_name: {
     type: String,
     required: false
   },
@@ -62,6 +77,10 @@ var WorkExpSchema = new Schema({
     description: {
         type: String,
         required:false
+    },
+    location: {
+      type: String,
+      required: false
     },
     date_started: {
         type: Date,
@@ -167,6 +186,7 @@ var ResumeSchema = new Schema({
       type: Date,
       required: false
   },
+  certifications: [CertificationSchema],
   skills: [SkillSchema],
   work_experience: [WorkExpSchema],
   education: [EducationSchema],

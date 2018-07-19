@@ -109,7 +109,8 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
 
 
   router.get('/preview', function(req, res) {
-      Resume.findOne({"uuid" : "5e38ccd0-8a8e-11e8-b248-952218ec5f36" }).lean().exec(function(err, resumedata){
+      // 5e38ccd0-8a8e-11e8-b248-952218ec5f36
+      Resume.findOne({"uuid" : "5b5aee10-8b3a-11e8-bf81-85a14625ffaa" }).lean().exec(function(err, resumedata){
           if (err || !resumedata) {
               return res.status(400).json({success:false, message: "an error has occured! "+err});
           }

@@ -1,6 +1,6 @@
 {
     "theme": "simple",
-    "label": "My first CV",
+    "label": "My second CV",
     "first_name": "Christophe",
     "last_name": "Ramsamy",
     "address_1":"Moon villa 2",
@@ -12,16 +12,92 @@
     "email": "christophe.kun@gmail.com",
     "current_job_title": "Freelance computer whisperer",
     "twitter": "_kyushiro",
-    "bio": "I am a zombie and i like oranges. i like eating them when i am hungry. i go buy oranges every chance i get because they are awesome",
+    "bio": "I am a zombie and i like oranges. i like eating them when i am hungry. i go buy oranges every chance i get because they are awesome. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Nulla vitae mauris non felis mollis faucibus.",
     "date_submitted": "2018-02-23",
     "skills": [
         {
-            "skill_name": "Javascript",
+            "skill_name": "Sass",
+            "skill_desc": "Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.",
             "skill_level": 8
         },
         {
             "skill_name": "Mongodb",
+            "skill_desc": "Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.",
             "skill_level": 7
+        },
+        {
+            "skill_name": "Nodejs",
+            "skill_desc": "ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.",
+            "skill_level": 7
+        },
+        {
+            "skill_name": "Php7",
+            "skill_desc": "adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.",
+            "skill_level": 7
+        }
+    ],
+    "language": [
+        {
+            "language_name": "French",
+            "language_level": 97
+        },
+        {
+            "language_name": "English",
+            "language_level": 95
+        },
+        {
+            "language_name": "Esperanto",
+            "language_level": 15
+        }
+    ],
+    "work_experience": [
+        {
+            "position" : "Senior Software Decorator",
+            "company_name": "Inpro Services",
+            "description": "Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.",
+            "location": "Ebene, Mauritius",
+            "date_started": "2017/02/29"
+        },
+        {
+            "position" : "Mobile application user",
+            "company_name": "My Company Is Owsome",
+            "description": "elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.",
+            "location": "Quatre bornes, Mauritius",
+            "date_started": "2016/11/01",
+            "date_ended": "2017/02/10"
+        },
+        {
+            "position" : "Web Worker",
+            "company_name": "Strip Filler",
+            "description": "dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.",
+            "location": "Pointe aux cannoniers, Mauritius",
+            "date_started": "2016/11/01",
+            "date_ended": "2017/02/10"
+        },
+        {
+            "position" : "Javascript story writer",
+            "company_name": "Octoindex",
+            "description": "Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.",
+            "location": "Quatre bornes, Mauritius",
+            "date_started": "2017/02/29",
+            "date_ended": "2017/02/10"
+
+        }
+    ],
+    "education": [
+        {
+            "institution_name": "University of Pressing Buttons",
+            "course_name": "Software Building for dummies",
+            "course_description": "This course is about software.",
+            "location": "Port louis, Mauritius",
+            "date_started": "2015/02/28",
+            "date_ended": "2017/02/10"
+        }
+    ],
+    "certifications": [
+        {
+            "certification_name": "Kentico Certified Developer",
+            "certification_date": "2018/08/07"
         }
     ]
   }
