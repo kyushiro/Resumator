@@ -14,6 +14,7 @@ var fs = require("fs");
 const pug = require('pug');
 const pdf = require('html-pdf')
 
+// add a resume for authed user
 router.post('/', passport.authenticate('jwt', { session: false}), function(req, res) {
     var authroles = ['user'];
     var token = utils.getToken(req.headers);
@@ -42,7 +43,32 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
   });
 
 
+  // delete resume if belongs to authed user
+  router.get("/wipe/:id", passport.authenticate('jwt', { session: false}), function(req,res){
+    var authroles = ['user'];
+    var token = utils.getToken(req.headers);
+    if (token){
+      var user = utils.getAuthUser(token);
+      if (!(authroles.find(x => x == user.role))){
+        console.log("Role "+user.role+" is not allowed access to this resource.")
+        return res.status(403).send({success: false, msg: 'Unauthorized.'})
+      }
 
+      Resume.findOne({"_id": req.params.id}, function(err, resume){
+          if (resume.user != user._id) return res.status(403).json({'success': false, msg: "Resume can only be deleted by creator"});
+          resume.remove(function(err, result){
+            if (err){
+                console.log("could not delete, "+err);
+                return res.status(403).json({'success': false, msg: "Deletion failed, "+err});
+            }
+            res.status(200).json({'message': "Deletion successful"});  
+          })
+        });
+    }
+  });
+
+
+  
   //list my resumes
   router.get('/list', passport.authenticate('jwt', { session: false}), function(req, res) {
     var authroles = ['user'];
@@ -149,11 +175,6 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
 
 
 
-  router.get("/wipe/:id",function(req,res){
-    Resume.findByIdAndRemove(req.params.id).exec(function(err,result){
-        if (err) console.log("could not delete, "+err);
-        res.status(200).json({'message': "yay"});
-    });
-  });
+
 
 module.exports = router;
