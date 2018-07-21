@@ -14,6 +14,16 @@ section, .section{
       background-color: $grey;
       color: $light-grey;
     }
+    &--grey-blue{
+      background-color: $grey-blue;
+      color: $light-grey;
+    }
+    &--medium-grey{
+      background-color: $medium-grey;
+    }
+    &--medium-light-grey{
+      background-color: $medium-light-grey;
+    }
   }
   &-content{
     &--white{

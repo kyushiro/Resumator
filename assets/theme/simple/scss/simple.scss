@@ -1,5 +1,23 @@
 $primary: #f39c12;
 
+body{
+  font-family: Lato, Arimo, Helvetica, Arial, sans-serif;
+}
+
+.header{
+  .header-title{
+    .text-first{
+      font-weight: 300;
+      text-transform: lowercase;
+    }
+    .text-last{
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $primary !important;
+    }
+
+  }
+}
 .page {
   //position: relative;
   //display: block;
@@ -48,5 +66,18 @@ $primary: #f39c12;
     &--primary{
       background: $primary !important;
     }
+  }
+}
+
+.text{
+  &-primary{
+    color: $primary !important;
+  }
+}
+
+.progress-bar{
+  &-fill{
+    height: 4px;
+    background-color: $primary !important;
   }
 }
