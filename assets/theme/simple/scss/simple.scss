@@ -29,6 +29,10 @@ body{
 @media print {
   body {
     background: $white;
+    font-size: 14px;
+  }
+  p{
+    font-size: 12px;
   }
   .page {
     margin: 0;
