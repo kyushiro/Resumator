@@ -28,7 +28,7 @@ const pdf = require('html-pdf')
         const compiledtpl = pug.compileFile(`assets/theme/${resumedata.theme}/index.pug`);
         const html = compiledtpl(resumedata);
 
-        pdf.create(html).toStream((err, stream) => {
+        pdf.create(html, {format:"A4", orientation:"portrait"}).toStream((err, stream) => {
           if (err) return res.end(err.stack)
           res.setHeader('Content-type', 'application/pdf')
           stream.pipe(res)
@@ -63,7 +63,7 @@ const pdf = require('html-pdf')
 
 
 
-  
+
   router.post("/themes/register/:name",function(req,res){
       var themename = req.params.name;
        Theme.find({"name": themename}).lean().exec(function(err,result){
