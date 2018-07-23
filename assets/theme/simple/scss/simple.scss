@@ -1,3 +1,4 @@
+$white: #fff;
 $primary: #f39c12;
 
 body{
@@ -19,15 +20,15 @@ body{
   }
 }
 .page {
-  //position: relative;
-  //display: block;
+  position: relative;
+  display: block;
   //background: black;
   page-break-after: auto;
   overflow: hidden;
 }
 @media print {
   body {
-    background: black;
+    background: $white;
   }
   .page {
     margin: 0;

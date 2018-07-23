@@ -4123,38 +4123,77 @@ $grid-spacing:3%;
 */
 
 
+////----- Columns (Automatic)
+//.col-1 { width:(100% / 12) - ($grid-spacing * 11 / 12);
+//  //padding-left: 15px; padding-right: 15px;
+//}
+//.col-2 { width:(100% / 6) - ($grid-spacing * 10 / 12);
+//  //padding-left: 15px; padding-right: 15px;
+//}
+//.col-3 { width:(100% / 4) - ($grid-spacing * 9 / 12);
+//  padding-left: 15px; padding-right: 15px;
+//}
+//.col-4 { width:(100% / 3) - ($grid-spacing * 8 / 12);
+//  padding-left: 15px; padding-right: 15px;
+//}
+//.col-5 { width:(100% / 2.4) - ($grid-spacing * 7 / 12);
+//  padding-left: 15px; padding-right: 15px;
+//}
+//.col-6 { width:(100% / 2) - ($grid-spacing * 6 / 12);
+//  padding-left: 15px; padding-right: 15px;
+//}
+//.col-7 { width:(100% / 1.714285714285714) - ($grid-spacing * 5 / 12);
+//  padding-left: 15px; padding-right: 15px;
+//}
+//.col-8 { width:(100% / 1.5) - ($grid-spacing * 4 / 12);
+//  padding-left: 15px; padding-right: 15px;
+//}
+//.col-9 { width:(100% / 1.333333333333333) - ($grid-spacing * 3 / 12);
+//  padding-left: 15px; padding-right: 15px;
+//}
+//.col-10 { width:(100% / 1.2) - ($grid-spacing * 2 / 12);
+//  padding-left: 15px; padding-right: 15px;
+//}
+//.col-11 { width:(100% / 1.090909090909091) - ($grid-spacing * 1 / 12);
+//  padding-left: 15px; padding-right: 15px;
+//}
+//.col-12 { width:100%;
+//  padding-left: 15px; padding-right: 15px;
+//}
+
+
 //----- Columns (Automatic)
-.col-1 { width:(100% / 12) - ($grid-spacing * 11 / 12);
+.col-1 { width:(100% / 12);
   //padding-left: 15px; padding-right: 15px;
 }
-.col-2 { width:(100% / 6) - ($grid-spacing * 10 / 12);
+.col-2 { width:(100% / 6);
   //padding-left: 15px; padding-right: 15px;
 }
-.col-3 { width:(100% / 4) - ($grid-spacing * 9 / 12);
+.col-3 { width:(100% / 4);
   padding-left: 15px; padding-right: 15px;
 }
-.col-4 { width:(100% / 3) - ($grid-spacing * 8 / 12);
+.col-4 { width:(100% / 3);
   padding-left: 15px; padding-right: 15px;
 }
-.col-5 { width:(100% / 2.4) - ($grid-spacing * 7 / 12);
+.col-5 { width:(100% / 2.4);
   padding-left: 15px; padding-right: 15px;
 }
-.col-6 { width:(100% / 2) - ($grid-spacing * 6 / 12);
+.col-6 { width:(100% / 2);
   padding-left: 15px; padding-right: 15px;
 }
-.col-7 { width:(100% / 1.714285714285714) - ($grid-spacing * 5 / 12);
+.col-7 { width:(100% / 1.714285714285714);
   padding-left: 15px; padding-right: 15px;
 }
-.col-8 { width:(100% / 1.5) - ($grid-spacing * 4 / 12);
+.col-8 { width:(100% / 1.5);
   padding-left: 15px; padding-right: 15px;
 }
-.col-9 { width:(100% / 1.333333333333333) - ($grid-spacing * 3 / 12);
+.col-9 { width:(100% / 1.333333333333333);
   padding-left: 15px; padding-right: 15px;
 }
-.col-10 { width:(100% / 1.2) - ($grid-spacing * 2 / 12);
+.col-10 { width:(100% / 1.2);
   padding-left: 15px; padding-right: 15px;
 }
-.col-11 { width:(100% / 1.090909090909091) - ($grid-spacing * 1 / 12);
+.col-11 { width:(100% / 1.090909090909091);
   padding-left: 15px; padding-right: 15px;
 }
 .col-12 { width:100%;

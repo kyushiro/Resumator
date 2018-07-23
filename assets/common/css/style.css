@@ -478,6 +478,9 @@ section, .section {
 .text-primary {
   color: #446E9B; }
 
+.text-word-wrap {
+  word-wrap: break-word; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
@@ -7897,53 +7900,53 @@ div[style*="clear:both"], div[style*="clear: both"] {
 .col-12 { width:100%; }
 */
 .col-1 {
-  width: 5.58333%; }
+  width: 8.33333%; }
 
 .col-2 {
-  width: 14.16667%; }
+  width: 16.66667%; }
 
 .col-3 {
-  width: 22.75%;
+  width: 25%;
   padding-left: 15px;
   padding-right: 15px; }
 
 .col-4 {
-  width: 31.33333%;
+  width: 33.33333%;
   padding-left: 15px;
   padding-right: 15px; }
 
 .col-5 {
-  width: 39.91667%;
+  width: 41.66667%;
   padding-left: 15px;
   padding-right: 15px; }
 
 .col-6 {
-  width: 48.5%;
+  width: 50%;
   padding-left: 15px;
   padding-right: 15px; }
 
 .col-7 {
-  width: 57.08333%;
+  width: 58.33333%;
   padding-left: 15px;
   padding-right: 15px; }
 
 .col-8 {
-  width: 65.66667%;
+  width: 66.66667%;
   padding-left: 15px;
   padding-right: 15px; }
 
 .col-9 {
-  width: 74.25%;
+  width: 75%;
   padding-left: 15px;
   padding-right: 15px; }
 
 .col-10 {
-  width: 82.83333%;
+  width: 83.33333%;
   padding-left: 15px;
   padding-right: 15px; }
 
 .col-11 {
-  width: 91.41667%;
+  width: 91.66667%;
   padding-left: 15px;
   padding-right: 15px; }
 

@@ -11,12 +11,14 @@ body {
   color: #f39c12 !important; }
 
 .page {
+  position: relative;
+  display: block;
   page-break-after: auto;
   overflow: hidden; }
 
 @media print {
   body {
-    background: black; }
+    background: #fff; }
   .page {
     margin: 0;
     height: 100%;

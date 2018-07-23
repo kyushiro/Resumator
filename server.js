@@ -49,7 +49,10 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/generate', GenerateRoute);
 
+//TODO : Remove console log.
 app.listen(process.env.PORT || 4000, function(){
     console.log("Running... api is at http://localhost:4000/api");
     console.log("swagger is at http://localhost:4000/api-docs");
-})
+    console.log("HTML preview - http://localhost:4000/dev/preview");
+    console.log("Generate PDF - http://localhost:4000/dev/generate");
+});
