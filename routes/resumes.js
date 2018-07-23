@@ -44,7 +44,7 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
 
 
   // delete resume if belongs to authed user
-  router.get("/wipe/:id", passport.authenticate('jwt', { session: false}), function(req,res){
+  router.delete("/:id", passport.authenticate('jwt', { session: false}), function(req,res){
     var authroles = ['user'];
     var token = utils.getToken(req.headers);
     if (token){

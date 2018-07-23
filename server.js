@@ -20,6 +20,7 @@ const port = process.env.port || 4000;
 const GenerateRoute = require('./routes/GenerateRoute');
 const UserRoute = require('./routes/users');
 const ResumeRoute = require('./routes/resumes');
+const DevRoute = require('./routes/dev'); // todo: disable this route
 app.use(bodyParser.json());
 
 mongoose.connect(dbconfig.database, { useNewUrlParser: true }).then(
@@ -42,6 +43,7 @@ app.use(express.static('assets'));
 // app.use('/api', api);
 app.use('/api/users',UserRoute);
 app.use('/api/resumes',ResumeRoute);
+app.use('/dev',DevRoute);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
