@@ -191,21 +191,37 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
   // todo: make this more secure
 
   router.post("/themes/register/:name",function(req,res){
-      var themename = req.params.name;
-       Theme.find({"name": themename}).lean().exec(function(err,result){
-          if (err || result){ 
-              console.log(result)
-              return res.status(400).json({success:false, message: err? err : "Theme already exists"});
-          }
-          let themeref = UUIDv1();
+    var authroles = ['user'];
+    var token = utils.getToken(req.headers);
+    if (token) {
+      var user = utils.getAuthUser(token);
+      if (!(authroles.find(x => x == user.role)))
+      {
+        console.log("Role "+user.role+" is not allowed access to this resource.");
+        return res.status(403).send({success: false, msg: 'Unauthorized.'});
+      }
 
-          var tmp = req.body;
-          tmp.reference = themeref;
-          mytheme = new Theme(tmp);
-          mytheme.save()
+      var themename = req.params.name;
+      console.log("themename : ", themename);
+      Theme.find({"name": themename}).lean().exec(function(err,result){
+
+        if (err){
+          console.log(result);
+          return res.status(400).json({success:false, message: err? err : "Theme already exists"});
+        }
+        let themeref = UUIDv1();
+
+        var tmp = req.body;
+        tmp.reference = themeref;
+        mytheme = new Theme(tmp);
+        mytheme.save()
           .then(resume => { res.status(200).json({'message':'theme added successfully!'}); })
-          .catch(err => { res.status(400).json({'error' : 'could not add theme, '+err }); })
+        .catch(err => { res.status(400).json({'error' : 'could not add theme, '+err }); })
       });
+
+    }
+
+
   });
 
 

@@ -14,6 +14,23 @@ var ThemeSchema = new Schema({
         type: String,
         required: true
     },
+    price: {
+       type: Number,
+       default: 0,
+       required: true
+    },
+    author_name: {
+        type: String,
+        required: true
+    },
+    author_link: {
+        type: String,
+        required: false
+    },
+    created_on: {
+        type: Date,
+        required: true
+    },
     tags: []
 });
 

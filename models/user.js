@@ -27,7 +27,7 @@ var UserSchema = new Schema({
   role : {
       type: String,
       default: 'user',
-      enum: ['user','recruiter','admin']
+      enum: ['user','recruiter','admin','dev']
   },
   themes : [ThemeSchema]
 });
