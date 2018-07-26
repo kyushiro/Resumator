@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "f30a8fa6-7824-4b23-aadf-65f74c7c3027",
+		"name": "Resumator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "local sign up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"chris\",\n\t\"password\" : \"pass123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"signup"
+					]
+				},
+				"description": "Create a new user account\n"
+			},
+			"response": []
+		},
+		{
+			"name": "local sign in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"chris\",\n\t\"password\" : \"pass123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"signin"
+					]
+				},
+				"description": "login user"
+			},
+			"response": []
+		},
+		{
+			"name": "test protected endpoint",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsIl9pZCI6IjViNGNlZDAzNWY0M2M0MTJiOTdiMzhlMiIsInVzZXJuYW1lIjoiY2hyaXMiLCJwYXNzd29yZCI6IiQyYSQxMCRaYXZDejVuR0FmRWxCN3p0NDZLODd1ZWdhNlJxS0JDajg2NnVxYjFEWUdFU1FNWGt1Um9ZbSIsIl9fdiI6MCwiaWF0IjoxNTMxNzY4MDgzfQ.Te7zKj8ZRzClQ_whjJylcjK1Qv4IQzOiBFqu5DDYPbc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"kyu\",\n\t\"password\" : \"pass123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"test"
+					]
+				},
+				"description": "protected endpoint accessible only to authed user"
+			},
+			"response": []
+		},
+		{
+			"name": "post a resume as a user with a token",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsIl9pZCI6IjViNGYzZjliNzE0ZDQwNGFiOGJhODg0NiIsInVzZXJuYW1lIjoiY2hyaXMiLCJwYXNzd29yZCI6IiQyYSQxMCRKaEJpVGVJWTFzcmxYRXFmT085dEF1eUEwOUZOWFJOaHloaG1HMFpZakp0Y25yRDlUSFk1NiIsInRoZW1lcyI6W10sIl9fdiI6MCwiaWF0IjoxNTMxOTIwNDA4fQ.KzcCkQQduB5J2Xngvwt-4nPXTETCjfFgrn-mBdXaYE8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"theme\": \"simple\",\n    \"label\": \"My second CV\",\n    \"first_name\": \"Christophe\",\n    \"last_name\": \"Ramsamy\",\n    \"address_1\":\"Moon villa 2\",\n    \"address_2\": \"Casse ghoon lane\",\n    \"city\":\"Grand baie\",\n    \"country\": \"Mauritius\",\n    \"phone_1\": \"+230 269 14 12\",\n    \"phone_2\": \"+230 5 712 74 42\",\n    \"email\": \"christophe.kun@gmail.com\",\n    \"current_job_title\": \"Freelance computer whisperer\",\n    \"twitter\": \"_kyushiro\",\n    \"bio\": \"I am a zombie and i like oranges. i like eating them when i am hungry. i go buy oranges every chance i get because they are awesome. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Nulla vitae mauris non felis mollis faucibus.\",\n    \"date_submitted\": \"2018-02-23\",\n    \"skills\": [\n        {\n            \"skill_name\": \"Sass\",\n            \"skill_desc\": \"Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.\",\n            \"skill_level\": 8\n        },\n        {\n            \"skill_name\": \"Mongodb\",\n            \"skill_desc\": \"Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.\",\n            \"skill_level\": 7\n        },\n        {\n            \"skill_name\": \"Nodejs\",\n            \"skill_desc\": \"ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.\",\n            \"skill_level\": 7\n        },\n        {\n            \"skill_name\": \"Php7\",\n            \"skill_desc\": \"adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.\",\n            \"skill_level\": 7\n        }\n    ],\n    \"language\": [\n        {\n            \"language_name\": \"French\",\n            \"language_level\": 97\n        },\n        {\n            \"language_name\": \"English\",\n            \"language_level\": 95\n        },\n        {\n            \"language_name\": \"Esperanto\",\n            \"language_level\": 15\n        }\n    ],\n    \"work_experience\": [\n        {\n            \"position\" : \"Senior Software Decorator\",\n            \"company_name\": \"Inpro Services\",\n            \"description\": \"Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.\",\n            \"location\": \"Ebene, Mauritius\",\n            \"date_started\": \"2017/02/29\"\n        },\n        {\n            \"position\" : \"Mobile application user\",\n            \"company_name\": \"My Company Is Owsome\",\n            \"description\": \"elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.\",\n            \"location\": \"Quatre bornes, Mauritius\",\n            \"date_started\": \"2016/11/01\",\n            \"date_ended\": \"2017/02/10\"\n        },\n        {\n            \"position\" : \"Web Worker\",\n            \"company_name\": \"Strip Filler\",\n            \"description\": \"dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.\",\n            \"location\": \"Pointe aux cannoniers, Mauritius\",\n            \"date_started\": \"2016/11/01\",\n            \"date_ended\": \"2017/02/10\"\n        },\n        {\n            \"position\" : \"Javascript story writer\",\n            \"company_name\": \"Octoindex\",\n            \"description\": \"Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.\",\n            \"location\": \"Quatre bornes, Mauritius\",\n            \"date_started\": \"2017/02/29\",\n            \"date_ended\": \"2017/02/10\"\n\n        }\n    ],\n    \"education\": [\n        {\n            \"institution_name\": \"University of Pressing Buttons\",\n            \"course_name\": \"Software Building for dummies\",\n            \"course_description\": \"This course is about software.\",\n            \"location\": \"Port louis, Mauritius\",\n            \"date_started\": \"2015/02/28\",\n            \"date_ended\": \"2017/02/10\"\n        }\n    ],\n    \"certifications\": [\n        {\n            \"certification_name\": \"Kentico Certified Developer\",\n            \"certification_date\": \"2018/08/07\"\n        }\n    ]\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/resumes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"resumes"
+					]
+				},
+				"description": "Post a resume. protected endpoint accessible only to authed user. "
+			},
+			"response": []
+		},
+		{
+			"name": "list user's resume",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsIl9pZCI6IjViNGYzZjliNzE0ZDQwNGFiOGJhODg0NiIsInVzZXJuYW1lIjoiY2hyaXMiLCJwYXNzd29yZCI6IiQyYSQxMCRKaEJpVGVJWTFzcmxYRXFmT085dEF1eUEwOUZOWFJOaHloaG1HMFpZakp0Y25yRDlUSFk1NiIsInRoZW1lcyI6W10sIl9fdiI6MCwiaWF0IjoxNTMxOTIwNDA4fQ.KzcCkQQduB5J2Xngvwt-4nPXTETCjfFgrn-mBdXaYE8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"theme\": \"simple\",\n    \"label\": \"My first CV\",\n    \"last_name\": \"Ramsamy\",\n    \"address_1\":\"Moon villa 2\",\n    \"address_2\": \"Casse ghoon lane\",\n    \"city\":\"Grand baie\",\n    \"country\": \"Mauritius\",\n    \"phone_1\": \"+230 269 14 12\",\n    \"phone_2\": \"+230 5 712 74 42\",\n    \"email\": \"christophe.kun@gmail.com\",\n    \"current_job_title\": \"Freelance computer whisperer\",\n    \"twitter\": \"_kyushiro\",\n    \"bio\": \"I am a zombie and i like oranges. i like eating them when i am hungry. i go buy oranges every chance i get because they are awesome\",\n    \"date_submitted\": \"2018-02-23\",\n    \"skills\": [\n        {\n            \"skill_name\": \"Javascript\",\n            \"skill_level\": 8\n        },\n        {\n            \"skill_name\": \"Mongodb\",\n            \"skill_level\": 7\n        }\n    ]\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/resumes/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"resumes",
+						"list"
+					]
+				},
+				"description": "get a list of currently authed user's cvs"
+			},
+			"response": []
+		},
+		{
+			"name": "theme registration",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsIl9pZCI6IjViNGYzZjliNzE0ZDQwNGFiOGJhODg0NiIsInVzZXJuYW1lIjoiY2hyaXMiLCJwYXNzd29yZCI6IiQyYSQxMCRKaEJpVGVJWTFzcmxYRXFmT085dEF1eUEwOUZOWFJOaHloaG1HMFpZakp0Y25yRDlUSFk1NiIsInRoZW1lcyI6W10sIl9fdiI6MCwiaWF0IjoxNTMxOTIwNDA4fQ.KzcCkQQduB5J2Xngvwt-4nPXTETCjfFgrn-mBdXaYE8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"simple\",\n    \"description\": \"This theme is like so simple or whatever\",\n    \"tags\": [\"simple\",\"general\",\"basic\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/resumes/themes/register/simple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"resumes",
+						"themes",
+						"register",
+						"simple"
+					]
+				},
+				"description": "register a theme"
+			},
+			"response": []
+		},
+		{
+			"name": "generate resume pdf",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsIl9pZCI6IjViNGYzZjliNzE0ZDQwNGFiOGJhODg0NiIsInVzZXJuYW1lIjoiY2hyaXMiLCJwYXNzd29yZCI6IiQyYSQxMCRKaEJpVGVJWTFzcmxYRXFmT085dEF1eUEwOUZOWFJOaHloaG1HMFpZakp0Y25yRDlUSFk1NiIsInRoZW1lcyI6W10sIl9fdiI6MCwiaWF0IjoxNTMxOTIwNDA4fQ.KzcCkQQduB5J2Xngvwt-4nPXTETCjfFgrn-mBdXaYE8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"simple\",\n    \"description\": \"This theme is like so simple or whatever\",\n    \"tags\": [\"simple\",\"general\",\"basic\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/resumes/generate/5e38ccd0-8a8e-11e8-b248-952218ec5f36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"resumes",
+						"generate",
+						"5e38ccd0-8a8e-11e8-b248-952218ec5f36"
+					]
+				},
+				"description": "generate resume pdf"
+			},
+			"response": []
+		},
+		{
+			"name": "delete resume by id",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsIl9pZCI6IjViNGYzZjliNzE0ZDQwNGFiOGJhODg0NiIsInVzZXJuYW1lIjoiY2hyaXMiLCJwYXNzd29yZCI6IiQyYSQxMCRKaEJpVGVJWTFzcmxYRXFmT085dEF1eUEwOUZOWFJOaHloaG1HMFpZakp0Y25yRDlUSFk1NiIsInRoZW1lcyI6W10sIl9fdiI6MCwiaWF0IjoxNTMxOTIwNDA4fQ.KzcCkQQduB5J2Xngvwt-4nPXTETCjfFgrn-mBdXaYE8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"theme\": \"simple\",\n    \"label\": \"My first CV\",\n    \"last_name\": \"Ramsamy\",\n    \"address_1\":\"Moon villa 2\",\n    \"address_2\": \"Casse ghoon lane\",\n    \"city\":\"Grand baie\",\n    \"country\": \"Mauritius\",\n    \"phone_1\": \"+230 269 14 12\",\n    \"phone_2\": \"+230 5 712 74 42\",\n    \"email\": \"christophe.kun@gmail.com\",\n    \"current_job_title\": \"Freelance computer whisperer\",\n    \"twitter\": \"_kyushiro\",\n    \"bio\": \"I am a zombie and i like oranges. i like eating them when i am hungry. i go buy oranges every chance i get because they are awesome\",\n    \"date_submitted\": \"2018-02-23\",\n    \"skills\": [\n        {\n            \"skill_name\": \"Javascript\",\n            \"skill_level\": 8\n        },\n        {\n            \"skill_name\": \"Mongodb\",\n            \"skill_level\": 7\n        }\n    ]\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/resumes/5b4f4056714d404ab8ba8848",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"resumes",
+						"5b4f4056714d404ab8ba8848"
+					]
+				},
+				"description": "delete resume of currently authed user by id"
+			},
+			"response": []
+		}
+	]
+}
