@@ -158,30 +158,30 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
     var token = utils.getToken(req.headers);
     if (token) {
       var user = utils.getAuthUser(token);
-      if (!(authroles.find(x = > x == user.role)))
+      if (!(authroles.find(x => x == user.role)))
       {
-
-        var resumeID = req.params.uuid;
-        Resume.findById(resumeID, function (err, doc) {
-          if(err || !doc){
-            return res.status(400).json({ success: false, message: err });
-          }
-
-          if(doc.user == user._id){
-            Resume.findOneAndUpdate({_id: doc._id}, req.body, function (err, doc) {
-              if(err){
-                return res.status(400).json({ success: false, message: err });
-              }
-
-              return res.status(200).json({ success: true, message: "Updated resume successfully" });
-
-            });
-          }
-
-        });
-
-
+        console.log("Role "+user.role+" is not allowed access to this resource.");
+        return res.status(403).send({success: false, msg: 'Unauthorized.'});
       }
+
+      var resumeID = req.params.uuid;
+      Resume.findById(resumeID, function (err, doc) {
+        if(err || !doc){
+          return res.status(400).json({ success: false, message: err });
+        }
+
+        if(doc.user == user._id){
+          Resume.findOneAndUpdate({_id: doc._id}, req.body, function (err, doc) {
+            if(err){
+              return res.status(400).json({ success: false, message: err });
+            }
+
+            return res.status(200).json({ success: true, message: "Updated resume successfully" });
+
+          });
+        }
+
+      });
     }
 
   });
