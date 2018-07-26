@@ -91,8 +91,6 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
     }
   });
 
-
-
   router.get('/generate/:uuid', passport.authenticate('jwt', { session: false}), function(req, res) {
     var authroles = ['user'];
     var token = utils.getToken(req.headers);
@@ -129,10 +127,7 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
         return res.status(403).send({success: false, msg: 'Unauthorized.'});
       }
   });
-
-
-  // 
-
+  //
 
   router.get('/preview', function(req, res) {
       // 5e38ccd0-8a8e-11e8-b248-952218ec5f36
@@ -151,7 +146,6 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
 
       });
   });
-
 
   router.put("/edit/:uuid", passport.authenticate('jwt', { session: false}), function (req, res) {
     var authroles = ['user'];
@@ -186,8 +180,6 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
 
   });
 
-
-
   // todo: make this more secure
 
   router.post("/themes/register/:name",function(req,res){
@@ -221,10 +213,29 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
 
     }
 
-
   });
 
+  //list all themes
+  router.get("/themes/list", passport.authenticate('jwt', { session: false}), function (req, res) {
+    var authroles = ['user'];
+    var token = utils.getToken(req.headers);
+    if (token) {
+      var user = utils.getAuthUser(token);
+      if (!(authroles.find(x => x == user.role))){
+        console.log("Role "+user.role+" is not allowed access to this resource.");
+        return res.status(403).send({success: false, msg: 'Unauthorized.'});
+      }
 
+      let allthemes = Theme.find().lean().exec(function (err, themelist) {
+        //console.log("themelist : ", themelist);
+        if(err) return res.status(400).json({sucess:false, message: err});
+        return res.status(200).json({success: true, data: themelist});
+      });
+    } else {
+      return res.status(403).send({sucess: false, message: "Unauthorized."})
+    }
+
+  });
 
 
 
