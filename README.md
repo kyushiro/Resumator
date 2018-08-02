@@ -12,7 +12,7 @@ You can follow the following steps to install the application.
  1. Clone this repository
 
 		git clone git@github.com:kyushiro/Resumator.git
-(or using HTTPS)
+		(or using HTTPS)
 		git clone https://github.com/kyushiro/Resumator.git
 
  2. Install the dependencies
